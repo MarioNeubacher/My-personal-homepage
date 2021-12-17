@@ -6,5 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
+  currentRoute = '';
+
+  constructor(private router: Route) {} //import
 }
