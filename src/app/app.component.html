@@ -1,2 +1,4 @@
-<app-menu [darkMode]="currentRoute == '/'"></app-menu>
-<router-outlet></router-outlet> <!-- shows the components -->
+<app-menu [darkMode]="router.url !== '/'"></app-menu> <!-- only when not the start url -->
+<div [class.container]="router.url !== '/'">
+    <router-outlet></router-outlet> <!-- shows the components -->
+</div>
