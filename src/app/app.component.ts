@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
   template: `<div #id-display>Some text</div>`
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent /* implements AfterViewInit */ {
   projects = [
     {
       img: '/assets/img/el-pollo-loco.png',
@@ -20,7 +20,7 @@ export class AppComponent implements AfterViewInit {
     }
   ]
 
-  filterProjects() {
+  /* filterProjects() {
     
     @ViewChild('id-display') myDiv: ElementRef;
 
@@ -54,6 +54,6 @@ export class AppComponent implements AfterViewInit {
         }
       }
     }
-  }
+  } */
 
 }
