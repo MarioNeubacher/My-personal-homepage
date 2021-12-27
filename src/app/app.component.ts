@@ -8,52 +8,72 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
   template: `<div #id-display>Some text</div>`
 })
-export class AppComponent /* implements AfterViewInit */ {
-  projects = [
+export class AppComponent implements AfterViewInit {
+
+  @ViewChild('id-display') myDiv!: ElementRef; //! necessary to initialize 
+
+  ngAfterViewInit() {
+    console.log(this.myDiv.nativeElement.innerHTML);
+  }
+
+  portfolioJSON = [
     {
-      img: '/assets/img/el-pollo-loco.png',
-      id: 'id-javascript'
+      img: '/assets/img/homepage.PNG',
+      language: 'angular'
     },
     {
-      img: '/assets/img/homepage.png',
-      id: 'id-angular'
+      img: '/assets/img/el-pollo-loco.png',
+      language: 'javascript'
+    },
+    {
+      img: '/assets/img/kanban.png',
+      language: 'javascript'
+    },
+    {
+      img: '/assets/img/pokedex.PNG',
+      language: 'javascript'
+    },
+    {
+      img: '/assets/img/tictactoe.PNG',
+      language: 'javascript'
+    },
+    {
+      img: '/assets/img/lieferando.PNG',
+      language: 'javascript'
+    },
+    {
+      img: '/assets/img/quiz.PNG',
+      ilanguage: 'javascript'
+    },
+    {
+      img: '/assets/img/instagram.PNG',
+      language: 'javascript'
+    },
+    {
+      img: '/assets/img/photos.PNG',
+      language: 'javascript'
+    },
+    {
+      img: '/assets/img/notes.PNG',
+      language: 'javascript'
     }
   ]
 
-  /* filterProjects() {
-    
-    @ViewChild('id-display') myDiv: ElementRef;
+  languagesArr! = any[]; //! says "dont complain if undefined" 
 
-    ngAfterViewInit() {
-      console.log(this.myDiv.nativeElement.innerHTML);
+  /**
+   * 
+   * @string languagesVar - app.component.html
+   */
+  filter(languagesVar: string) {
+    if (languagesVar == 'id-all') {
+      this.languagesArr = this.portfolioJSON;
+    } else {
+      this.languagesArr = this.portfolioJSON.filter(site => site.language == language);
+    }
   }
 
-    for (let i = 0; i < projects.length; i++) {
-      const placeholder = projects[i];
-      if (placeholder['id'].includes('angular')) {
-        document.getElementById('id-display').innerHTML += `
-          <div id="display" class="div-portfolio">
-            <div style="background-image: url(${placeholder})"></div>
-            <div style="background-image: url(${placeholder})"></div>
-          </div>
-        `;
-      }if (placeholder['id'].includes('javascript')) {
-        document.getElementById('id-display').innerHTML += `
-          <div id="display" class="div-portfolio">
-            <div style="background-image: url(${placeholder})"></div>
-            <div style="background-image: url(${placeholder})"></div>
-          </div>
-        `;
-      } else {
-        document.getElementById('id-display').innerHTML += `
-            <div id="display" class="div-portfolio">
-              <div style="background-image: url(${placeholder})"></div>
-              <div style="background-image: url(${placeholder})"></div>
-            </div>
-          `;
-        }
-      }
-    }
-  } */
-
+  ngOnInit(): void {
+    this.languagesArr = this.portfolioJSON;
+  }
 }

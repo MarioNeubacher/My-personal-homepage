@@ -4,6 +4,7 @@
     --red: #FA2759;
     --grey: #131111;
     --green: #2DFCD8;
+    color: white;
 }
 
 a {
@@ -42,13 +43,6 @@ p {
     padding: 0px;
 }
 
-/* .container {
-    padding-left: 120px;
-    padding-right: 120px;
-    padding-top: 120px;
-} */
-
-
 .div-links {
     color: grey;
     font-weight: 500;
@@ -60,21 +54,36 @@ p {
     }
 }
 
+.div-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-portfolio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px 0px 60px 0px;
+}
+
+.img-projects {
+    display: flex;
+    justify-content: space-between;
+    height: 227.5px;
+    width: 495px;
+    margin: 15px;
+    border-radius: 10px;
+    background-size: contain;
+}
+
 .div-section1background{
     background-color: black; 
 }
 
 .div-section2background{
     background-color: var(--grey); 
-}
-
-.div-section {
-    padding: 0px 0px 40px 0px; 
-    display: flex; 
-    justify-content: center; 
-    flex-direction:column; 
-    align-items:center; 
-    color: white;
 }
 
 .darkLinks {
@@ -117,40 +126,6 @@ p {
     &:hover {
         filter: invert(50%); 
     }
-}
-
-.div-portfolio {
-    display: flex; 
-    justify-content: space-between;
-}
-
-.img-projects {
-    height: 227.5px;
-    width: 485px;
-    margin: 15px;
-    border-radius: 20px;
-    background-size: contain;
-}
-
-.div-ElPolloLoco {
-    background-image: url(/assets/img/el-pollo-loco.png);
-}
-
-.div-kanban {
-    background-image: url(/assets/img/kanban.png);
-}
-
-.div-pokedex {
-    background-image: url(/assets/img/pokedex.PNG);
-}
-
-.div-tictactoe {
-    background-image: url(/assets/img/tictactoe.PNG);
-}
-
-.div-lieferando {
-    background-image: url(/assets/img/lieferando.PNG);
-    width: 480px;
 }
 
 .div-projectsLanguage {
