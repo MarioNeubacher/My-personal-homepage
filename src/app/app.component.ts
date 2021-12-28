@@ -59,7 +59,7 @@ export class AppComponent implements AfterViewInit {
     }
   ]
 
-  languagesArr! = any[]; //! says "dont complain if undefined" 
+  languagesArr!: any[]; //! says "dont complain if undefined" 
 
   /**
    * 
@@ -69,7 +69,7 @@ export class AppComponent implements AfterViewInit {
     if (languagesVar == 'id-all') {
       this.languagesArr = this.portfolioJSON;
     } else {
-      this.languagesArr = this.portfolioJSON.filter(site => site.language == language);
+      this.languagesArr = this.portfolioJSON.filter(site => site.language == languagesVar);
     }
   }
 

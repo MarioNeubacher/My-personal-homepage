@@ -34,8 +34,8 @@
         <div id="id-javascript" (click)="filter('javascript')" class="div-projectsLanguage">Java Script</div>
     </div>
     <div class="div-portfolio" >
-        <div *ngFor="let project of projects">
-            <img class="img-projects" [src]="project.img">
+        <div *ngFor="let portfolioJSON of portfolioJSON">
+            <img class="img-projects" [src]="portfolioJSON.img">
         </div>
     </div>
 </div>
