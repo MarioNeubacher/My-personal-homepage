@@ -1,0 +1,13 @@
+<div id="projects" class="div-section div-section2background">
+    <h1>My projects</h1>
+    <div style="display: flex; justify-content: space-around; align-items:center;width: 360px; padding-bottom: 10px;">
+        <div id="id-all" (click)="filter('all')" class="div-projectsLanguage">All</div>
+        <div id="id-angular" (click)="filter('angular')" class="div-projectsLanguage">Angular</div>
+        <div id="id-javascript" (click)="filter('javascript')" class="div-projectsLanguage">Java Script</div>
+    </div>
+    <div class="div-portfolio">
+        <div *ngFor="let portfolioJSON of portfolioJSON">
+            <img class="img-projects" [src]="portfolioJSON.img">
+        </div>
+    </div>
+</div>

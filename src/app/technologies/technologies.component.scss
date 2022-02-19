@@ -1,0 +1,24 @@
+* {
+    padding: 0px 0px;
+    margin: 0px;
+    --red: #FA2759;
+    --grey: #131111;
+    --green: #2DFCD8;
+    color: white;
+}
+
+h1 {
+    padding: 20px 20px 30px 20px;
+    margin-top: 40px;
+}
+
+.div-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-section1background{
+    background-color: black; 
+}

@@ -5,12 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { MenuComponent } from './menu/menu.component';
+import { HomeComponent } from './home/home.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { TechnologiesComponent } from './technologies/technologies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImprintComponent,
-    DataProtectionComponent
+    DataProtectionComponent,
+    MenuComponent,
+    HomeComponent,
+    PortfolioComponent,
+    TechnologiesComponent
   ],
   imports: [
     BrowserModule,
