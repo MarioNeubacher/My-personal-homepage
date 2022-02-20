@@ -5,15 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
-  /* var div-contact = document.querySelector('.div-contact');
-var on = false;
+  constructor() { }
 
-constructor() { }
+  ngOnInit(): void {
+  }
 
-setInterval(function () {
-  progbar.setAttribute('data-animation', (on) ? 'barshine' : '');
-  on = !on;
-}, 3000); */
 }
