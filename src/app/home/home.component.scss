@@ -4,6 +4,9 @@
     --red: #FA2759;
     --grey: #131111;
     --green: #2DFCD8;
+    --typingSpeed: 1.5s;
+    --typingCharacters: 7;
+    --typingDelay: 2s;
     color: white;
 }
 
@@ -45,6 +48,7 @@ p {
     align-items:center; 
     justify-content: center; 
     height: 50px; 
+    width: 200px;
     border-radius: 10px; 
     margin: 50px 300px 0px 0px;
     color: var(--green);
@@ -80,29 +84,46 @@ p {
     50% {transform: scale(1.1, 1.1);}
 }
 
-.dynamic-txts li {
-    font-family: "Source Code Pro", monospace;
+.txt-dynamic {
+    font-family: monospace;
     font-size: 60px; 
-    list-style: none;
     margin-bottom: 10px;
-}
-
-.dynamic-txts li span {
     position: relative;
+    /* outline: 2px solid red; */
+    width: max-content; //necessary for steps length to adjust
 }
 
-.dynamic-txts li span::after {
-    content: "";
+.txt-dynamic::before,
+.txt-dynamic::after {
+    content: '';
     position: absolute;
+    top: 0;
+    bottom: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    border-left: 2px solid var(--green);
-    animation: typing 2s steps(8) forwards;
+    right: 0;
+}
+
+.txt-dynamic::before {
+    background-color: black;
+    animation: typing var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards;
+}
+
+.txt-dynamic::after {
+    width: 0.125em;
+    background-color: var(--green);
+    animation: 
+        typing var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards,
+        blink 750ms steps(var(--typingCharacters)) infinite;
 }
 
 @keyframes typing {
-    100% {
+    to { 
         left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
     }
 }
