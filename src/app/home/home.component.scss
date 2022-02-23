@@ -88,13 +88,34 @@ p {
     font-family: monospace;
     font-size: 60px; 
     margin-bottom: 10px;
-    position: relative;
+    position: relative; //animations adapts to div 
     /* outline: 2px solid red; */
     width: max-content; //necessary for steps length to adjust
 }
 
+.txt-dynamic2 {
+    font-family: monospace;
+    font-size: 60px; 
+    margin-bottom: 10px;
+    /* outline: 2px solid red; */
+    width: max-content; //necessary for steps length to adjust
+    opacity: 0;
+    animation: easeIn 2s 3.5s forwards;
+    color: var(--red);
+}
+
 .txt-dynamic::before,
 .txt-dynamic::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.txt-dynamic2::before,
+.txt-dynamic2::after {
     content: '';
     position: absolute;
     top: 0;
@@ -108,12 +129,25 @@ p {
     animation: typing var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards;
 }
 
+.txt-dynamic2::before {
+    background-color: black;
+    animation: typing var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards;
+}
+
 .txt-dynamic::after {
     width: 0.125em;
     background-color: var(--green);
     animation: 
-        typing var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards,
-        blink 750ms steps(var(--typingCharacters)) infinite;
+        typing2 var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards,
+        blink 1s steps(var(--typingCharacters)) infinite;
+}
+
+.txt-dynamic2::after {
+    width: 0.125em;
+    background-color: var(--green);
+    animation: 
+        typing2 var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards,
+        blink 1s steps(var(--typingCharacters)) infinite;
 }
 
 @keyframes typing {
@@ -122,8 +156,21 @@ p {
     }
 }
 
+@keyframes typing2 {
+    to { 
+        left: 100%;
+        background-color: transparent;
+    }
+}
+
 @keyframes blink {
     to {
         background: transparent;
+    }
+}
+
+@keyframes easeIn {
+    to {
+        opacity: 1;
     }
 }
