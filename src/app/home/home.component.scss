@@ -6,7 +6,7 @@
     --green: #2DFCD8;
     --typingSpeed: 1.5s;
     --typingCharacters: 7;
-    --typingCharacters: 15;
+    --typingCharacters2: 15;
     --typingDelay: 2s;
     color: white;
 }
@@ -102,6 +102,7 @@ p {
     /* outline: 2px solid red; */
     width: max-content; //necessary for steps length to adjust
     color: var(--red);
+    opacity: 0;
 }
 
 .txt-dynamic::before,
@@ -138,16 +139,17 @@ p {
     width: 0.125em;
     background-color: var(--green);
     animation: 
-        typingFade var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards,
-        blink 1s steps(var(--typingCharacters)) infinite;
+        blink 1s steps(var(--typingCharacters)) infinite,
+        typingFade var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards;
 }
 
 .txt-dynamic2::after {
     width: 0.125em;
     background-color: var(--green);
+    opacity: 0;
     animation: 
-        typingFade var(--typingSpeed) steps(var(--typingCharacters2)) 3.5s forwards,
-        blink 1s steps(var(--typingCharacters)) 3.5s infinite;
+        blink2 1s steps(var(--typingCharacters2)) 3.5s infinite,
+        typingFade var(--typingSpeed) steps(var(--typingCharacters2)) 3.5s forwards;
 }
 
 @keyframes typing {
@@ -156,15 +158,22 @@ p {
     }
 }
 
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes blink2 {
+    to {
+        opacity: 1;
+        background: transparent;
+    }
+}
+
 @keyframes typingFade {
     to { 
         left: 100%;
         background-color: transparent;
-    }
-}
-
-@keyframes blink {
-    to {
-        background: transparent;
     }
 }
