@@ -100,9 +100,8 @@ p {
     position: relative; //animations adapts to div 
     /* outline: 2px solid red; */
     width: max-content; //necessary for steps length to adjust
-    opacity: 0;
-    animation: easeIn 2s 3.5s forwards;
     color: var(--red);
+    opacity: 0;
 }
 
 .txt-dynamic::before,
@@ -132,7 +131,7 @@ p {
 
 .txt-dynamic2::before {
     background-color: black;
-    animation: typing var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards;
+    animation: typing2 var(--typingSpeed) steps(var(--typingCharacters)) 3.5s forwards;
 }
 
 .txt-dynamic::after {
@@ -147,7 +146,7 @@ p {
     width: 0.125em;
     background-color: var(--green);
     animation: 
-        typing2 var(--typingSpeed) steps(var(--typingCharacters)) var(--typingDelay) forwards,
+        typingFade var(--typingSpeed) steps(var(--typingCharacters)) 3.5s forwards,
         blink 1s steps(var(--typingCharacters)) infinite;
 }
 
@@ -158,6 +157,13 @@ p {
 }
 
 @keyframes typing2 {
+    to { 
+        opacity: 1;
+        left: 100%;
+    }
+}
+
+@keyframes typingFade {
     to { 
         left: 100%;
         background-color: transparent;
