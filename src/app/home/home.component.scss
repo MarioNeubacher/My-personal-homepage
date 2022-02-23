@@ -102,7 +102,6 @@ p {
     /* outline: 2px solid red; */
     width: max-content; //necessary for steps length to adjust
     color: var(--red);
-    opacity: 0;
 }
 
 .txt-dynamic::before,
@@ -146,7 +145,6 @@ p {
 .txt-dynamic2::after {
     width: 0.125em;
     background-color: var(--green);
-    opacity: 0;
     animation: 
         blink2 1s steps(var(--typingCharacters2)) 3.5s infinite,
         typingFade var(--typingSpeed) steps(var(--typingCharacters2)) 3.5s forwards;
