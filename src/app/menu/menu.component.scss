@@ -44,12 +44,14 @@ p {
 }
 
 .div-links {
-    color: grey;
-    font-weight: 500;
+    color: white;
     padding: 20px 15px;
 
     &:hover {
-        background-color: var(--red);
-        color: white;
+        color: var(--red);
     }
+}
+
+.redtxt {
+    color: va(--red);
 }

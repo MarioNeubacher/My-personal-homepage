@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechnologiesComponent implements OnInit {
 
+  selectedSection = true;
+
   constructor() { }
 
   ngOnInit(): void {
