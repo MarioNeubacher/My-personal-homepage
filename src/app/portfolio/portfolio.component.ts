@@ -7,8 +7,6 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  selectedSection = true;
-
   @ViewChild('id-display') myDiv!: ElementRef; //! necessary to initialize 
 
   ngAfterViewInit() {
