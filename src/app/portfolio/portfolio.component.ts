@@ -13,6 +13,7 @@ export class PortfolioComponent implements OnInit {
   constructor (private router: Router) {}
 
   scrollDown() {
+    console.log("scrollDown");
     this.router.navigate([], { fragment: "projects" });
   }
 
