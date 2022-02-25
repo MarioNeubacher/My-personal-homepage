@@ -6,7 +6,7 @@
     </a>
     <div>
         <a class="div-links" [class.redtxt]="selectedSection" routerLink="/">HOME</a>
-        <a class="div-links" [class.redtxt]="selectedSection" routerLink="/portfolio">PORTFOLIO</a>
+        <a class="div-links" [class.redtxt]="selectedSection" (click)="scrollDown()" routerLink="/portfolio">PORTFOLIO</a>
         <a class="div-links" [class.redtxt]="selectedSection" routerLink="/technologies">TECHNOLOGIES</a>
         <a class="div-links" [class.redtxt]="selectedSection" routerLink="/about">ABOUT</a>
         <a class="div-links" [class.redtxt]="selectedSection" routerLink="/contact">CONTACT</a>

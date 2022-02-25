@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -9,9 +10,13 @@ export class MenuComponent implements OnInit {
 
   @Input() selectedSection = true;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  scrollDown() {
+    this.router.navigate([], { fragment: "projects" });
   }
 
 }

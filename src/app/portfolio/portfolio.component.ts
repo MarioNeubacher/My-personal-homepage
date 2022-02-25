@@ -1,5 +1,5 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,18 +10,15 @@ export class PortfolioComponent implements OnInit {
 
   @ViewChild('id-display') myDiv!: ElementRef; //! necessary to initialize 
 
-  constructor (private scroller: ViewportScroller) {}
-
-  ngOnInit(): void {
-    this.languages = this.portfolioJSON;
-  }
+  constructor (private router: Router) {}
 
   scrollDown() {
-    document.getElementById("projects").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-      });
+    this.router.navigate([], { fragment: "projects" });
+  }
+
+  ngOnInit(): void {
+    this.router.navigate(["/"]);
+    this.languages = this.portfolioJSON;
   }
 
   ngAfterViewInit() {
