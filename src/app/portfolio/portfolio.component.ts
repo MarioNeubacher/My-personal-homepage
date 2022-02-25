@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
@@ -8,6 +9,20 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class PortfolioComponent implements OnInit {
 
   @ViewChild('id-display') myDiv!: ElementRef; //! necessary to initialize 
+
+  constructor (private scroller: ViewportScroller) {}
+
+  ngOnInit(): void {
+    this.languages = this.portfolioJSON;
+  }
+
+  scrollDown() {
+    document.getElementById("projects").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+      });
+  }
 
   ngAfterViewInit() {
     console.log(this.myDiv.nativeElement.innerHTML);
@@ -64,9 +79,5 @@ export class PortfolioComponent implements OnInit {
     } else {
       this.languages = this.portfolioJSON.filter(site => site.language == language);
     }
-  }
-
-  ngOnInit(): void {
-    this.languages = this.portfolioJSON;
   }
 }
