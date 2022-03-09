@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable, OnInit, HostListener } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -11,19 +11,17 @@ export class TestService implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    switchMenuTab();
   }
 
-  window.onscroll = switchMenuTab;
-
+  @HostListener("document:scroll")
   switchMenuTab() {
-    if (scrolledPastFirstSection()) {
-      !firstSection;
-      secondSection;
+    if (this.scrolledPastFirstSection()) {
+      !this.firstSection;
+      this.secondSection;
     } 
   }
 
   scrolledPastFirstSection() {
-    return window.scrollY > 250;
+    return document.body.scrollTop > 100;
   }
 }
