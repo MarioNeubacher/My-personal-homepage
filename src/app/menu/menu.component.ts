@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { TestService } from '../test.service';
+import { ScrollingService } from '../scrolling.service';
+import { Inject } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -11,17 +12,15 @@ export class MenuComponent implements OnInit {
 
   @Input() selectedSection = true;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public scrolling: ScrollingService) { }
 
   ngOnInit(): void {
   }
 
-  firstSection = true;
-
-  @HostListener("document:scroll")
-  switchMenuTab() {
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-      !this.firstSection;
-    } 
+  // @HostListener('scroll', ['$event']) // for scroll events of the current element
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event: any) {
+    console.log(this.scrolling.reachedTarget());
   }
+
 }

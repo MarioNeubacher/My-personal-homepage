@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ScrollingService } from './scrolling.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,7 @@ import { Router } from '@angular/router';
 
 export class AppComponent implements OnInit {
 
-  constructor(
-    public router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }
