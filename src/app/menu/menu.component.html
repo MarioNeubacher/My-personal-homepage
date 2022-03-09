@@ -4,13 +4,25 @@
         <span style="color: #FA2759">.</span>
         N
     </a>
-    <div>
-        <a class="div-links" [class.redtxt]="selectedSection" routerLink="/">HOME</a>
-        <a class="div-links" [class.redtxt]="selectedSection" (click)="scrollDown()" routerLink="/portfolio">PORTFOLIO</a>
-        <a class="div-links" [class.redtxt]="selectedSection" routerLink="/technologies">TECHNOLOGIES</a>
-        <a class="div-links" [class.redtxt]="selectedSection" routerLink="/about">ABOUT</a>
-        <a class="div-links" [class.redtxt]="selectedSection" routerLink="/contact">CONTACT</a>
+
+    <ul class="snip1135">
+        <li [class.current]="this.TestVariable.firstSection"><a href="/#home" data-hover="Home">Home</a></li>
+        <li [class.current]="this.TestVariable.secondSection"><a href="/#projects" data-hover="Portfolio">Portfolio</a></li>
+        <li><a href="/#technologies" data-hover="TECHNOLOGIES">TECHNOLOGIES</a></li>
+        <li><a href="/#about" data-hover="ABOUT">ABOUT</a></li>
+        <li><a href="/#contact" data-hover="Contact">Contact</a></li>
+    </ul>
+
+    <a class="div-links">EN</a>
+    <a class="div-links">Darkmode</a> <!-- vid 17 input parameter  -->
+
+    <!-- <div>
+        <a id="id-home" class="div-links" href="/#home">HOME</a>
+        <a id="id-portfolio" class="div-links" href="/#projects">PORTFOLIO</a>
+        <a id="id-technologies" class="div-links" href="/#technologies">TECHNOLOGIES</a>
+        <a id="id-about" class="div-links" href="/#about">ABOUT</a>
+        <a id="id-contact" class="div-links" href="/#contact">CONTACT</a>
         <a class="div-links">EN</a>
         <a class="div-links">Darkmode</a> <!-- vid 17 input parameter  -->
-    </div>
+    <!--  </div> -->
 </header>

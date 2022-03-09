@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { TestService } from '../test.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,7 +11,7 @@ export class MenuComponent implements OnInit {
 
   @Input() selectedSection = true;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public TestVariable: TestService) { }
 
   ngOnInit(): void {
   }

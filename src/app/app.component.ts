@@ -5,14 +5,15 @@ import { Router } from '@angular/router';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  template: `<div #id-display>Some text</div>`
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   constructor(
     public router: Router) { }
 
-  
+  ngOnInit(): void {
+  }
+
 
 }
