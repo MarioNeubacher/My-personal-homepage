@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { TestService } from '../test.service';
 
@@ -11,13 +11,17 @@ export class MenuComponent implements OnInit {
 
   @Input() selectedSection = true;
 
-  constructor(private router: Router, public TestVariable: TestService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  scrollDown() {
-    this.router.navigate([], { fragment: "projects" });
-  }
+  firstSection = true;
 
+  @HostListener("document:scroll")
+  switchMenuTab() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      !this.firstSection;
+    } 
+  }
 }
