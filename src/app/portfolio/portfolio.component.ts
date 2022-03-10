@@ -28,54 +28,60 @@ export class PortfolioComponent implements OnInit {
 
   portfolioJSON = [
     {
+      img: '/assets/img/ring-of-fire.PNG',
+      language: 'angular',
+    },
+    {
       img: '/assets/img/homepage.PNG',
-      language: 'angular'
+      language: 'angular',
     },
     {
       img: '/assets/img/el-pollo-loco.png',
-      language: 'javascript'
+      language: 'javascript',
     },
     {
       img: '/assets/img/kanban.png',
-      language: 'javascript'
+      language: 'javascript',
     },
     {
       img: '/assets/img/pokedex.PNG',
-      language: 'javascript'
+      language: 'javascript',
     },
     {
       img: '/assets/img/tictactoe.PNG',
-      language: 'javascript'
-    },
-    {
-      img: '/assets/img/lieferando.PNG',
-      language: 'javascript'
+      language: 'javascript',
     },
     {
       img: '/assets/img/quiz.PNG',
-      ilanguage: 'javascript'
+      ilanguage: 'javascript',
     },
     {
       img: '/assets/img/instagram.PNG',
-      language: 'javascript'
+      language: 'javascript',
+    },
+    {
+      img: '/assets/img/lieferando.PNG',
+      language: 'javascript',
     },
     {
       img: '/assets/img/photos.PNG',
-      language: 'javascript'
+      language: 'javascript',
     },
     {
       img: '/assets/img/notes.PNG',
-      language: 'javascript'
+      language: 'javascript',
     }
   ]
 
   languages!: any[]; //! says "dont complain if undefined" 
 
   filter(language: string) {
-    if (language == 'all') {
-      this.languages = this.portfolioJSON;
-    } else {
+    if (language == this.portfolioJSON['angular']) {
       this.languages = this.portfolioJSON.filter(site => site.language == language);
+    } else if (language == this.portfolioJSON['javascript']) {
+      this.languages = this.portfolioJSON.filter(site => site.language == language);
+    } else {
+      this.languages = this.portfolioJSON;
     }
   }
 }

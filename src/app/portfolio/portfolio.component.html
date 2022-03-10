@@ -6,8 +6,8 @@
         <div id="id-javascript" (click)="filter('javascript')" class="div-projectsLanguage">Java Script</div>
     </div>
     <div class="div-portfolio">
-        <div *ngFor="let portfolioJSON of portfolioJSON">
-            <img class="img-projects" [src]="portfolioJSON.img">
+        <div *ngFor="let element of portfolioJSON">
+            <img [src]="element.img" class="img-projects">
         </div>
     </div>
 </div>
