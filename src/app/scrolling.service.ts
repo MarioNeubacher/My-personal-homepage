@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ScrollingService {
 
-  firstMenuSectionY = 660;
+  firstMenuSectionY = 660 / 2;
   secondMenuSectionY = 1920;
 
   constructor() { }

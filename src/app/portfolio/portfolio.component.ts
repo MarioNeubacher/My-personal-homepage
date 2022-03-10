@@ -8,95 +8,73 @@ import { Router } from '@angular/router';
 })
 export class PortfolioComponent implements OnInit {
 
-  allActive = false;
-  angularActive = false;
-  javascriptActive = false;
+  currentFilter = '';
 
-  @ViewChild('id-display') myDiv!: ElementRef; //! necessary to initialize 
-
-  constructor(private router: Router) { }
-
-  scrollDown() {
-    console.log("scrollDown");
-    this.router.navigate([], { fragment: "projects" });
-  }
-
-  ngOnInit(): void {
-    this.router.navigate(["/"]);
-    this.filtered = this.allProjects;
-  }
-
-  ngAfterViewInit() {
-    console.log(this.myDiv.nativeElement.innerHTML);
-  }
-
-  allProjects = [
+  projects = [
     {
-      img: '/assets/img/ring-of-fire.PNG',
-      language: 'angular',
+      img: 'ring-of-fire.PNG',
+      category: 'angular',
     },
     {
-      img: '/assets/img/homepage.PNG',
-      language: 'angular',
+      img: 'homepage.PNG',
+      category: 'angular',
     },
     {
-      img: '/assets/img/el-pollo-loco.png',
-      language: 'javascript',
+      img: 'el-pollo-loco.png',
+      category: 'javascript',
     },
     {
-      img: '/assets/img/kanban.png',
-      language: 'javascript',
+      img: 'kanban.png',
+      category: 'javascript',
     },
     {
-      img: '/assets/img/pokedex.PNG',
-      language: 'javascript',
+      img: 'pokedex.PNG',
+      category: 'javascript',
     },
     {
-      img: '/assets/img/tictactoe.PNG',
-      language: 'javascript',
+      img: 'tictactoe.PNG',
+      category: 'javascript',
     },
     {
-      img: '/assets/img/quiz.PNG',
-      ilanguage: 'javascript',
+      img: 'quiz.PNG',
+      icategory: 'javascript',
     },
     {
-      img: '/assets/img/instagram.PNG',
-      language: 'javascript',
+      img: 'instagram.PNG',
+      category: 'javascript',
     },
     {
-      img: '/assets/img/lieferando.PNG',
-      language: 'javascript',
+      img: 'lieferando.PNG',
+      category: 'javascript',
     },
     {
-      img: '/assets/img/photos.PNG',
-      language: 'javascript',
+      img: 'photos.PNG',
+      category: 'javascript',
     },
     {
-      img: '/assets/img/notes.PNG',
-      language: 'javascript',
+      img: 'notes.PNG',
+      category: 'javascript',
     }
   ]
 
-  filtered: any; //! says "dont complain if undefined" 
+  visibleProjects = this.projects;
 
-  showAll() {
-    !this.allActive;
-    this.angularActive;
-    this.javascriptActive;
-    this.filtered = this.allProjects;
+  constructor() { }
+
+  ngOnInit(): void {
   }
 
-  showAngular(category: any) {
-    this.allActive;
-    !this.angularActive;
-    this.javascriptActive;
-   /*  this.filtered = this.allProjects.filter(project => project.category === category); */
+  updateFilter(newFilter?: string) {
+    if (newFilter == undefined) {
+      this.currentFilter = '';
+      this.visibleProjects = this.projects;
+    } else if (newFilter == 'Angular') {
+      this.currentFilter = 'Angular';
+      this.visibleProjects = this.projects.filter(project => project.category == 'angular');
+    } else if (newFilter == 'JavaScript') {
+      this.currentFilter = 'JavaScript';
+      this.visibleProjects = this.projects.filter(project => project.category == 'javascript');
+    }
   }
 
-  showJavascript(category: any) {
-    this.allActive;
-    this.angularActive;
-    !this.javascriptActive;
-    /*  this.filtered = this.allProjects.filter(project => project.category === category); */
-   }
 }
