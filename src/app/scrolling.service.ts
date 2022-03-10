@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class ScrollingService {
 
-  targetY!: 10;
+  targetY = 10;
 
   constructor() { }
 
   reachedTarget() {
-    console.log('service works');
+/*     console.log('service works'); */
     return window.scrollY > this.targetY;
   }
 }
