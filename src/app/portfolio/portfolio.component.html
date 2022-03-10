@@ -1,13 +1,13 @@
 <div id="projects" class="div-section div-section2background">
     <h1>My projects</h1>
     <div style="display: flex; justify-content: space-around; align-items:center;width: 360px; padding-bottom: 10px;">
-        <div id="id-all" (click)="filter('all')" class="div-projectsLanguage">All</div>
-        <div id="id-angular" (click)="filter('angular')" class="div-projectsLanguage">Angular</div>
-        <div id="id-javascript" (click)="filter('javascript')" class="div-projectsLanguage">Java Script</div>
+        <div id="id-all" [class.current]="!this.allActive" (click)="showAll()" class="div-projectsLanguage">All</div>
+        <div id="id-angular" [class.current]="!this.angularActive" (click)="showAngular('angular')" class="div-projectsLanguage">Angular</div>
+        <div id="id-javascript" [class.current]="!this.javascriptActive" (click)="showJavascript('javascript')" class="div-projectsLanguage">Java Script</div>
     </div>
     <div class="div-portfolio">
-        <div *ngFor="let element of portfolioJSON">
-            <img [src]="element.img" class="img-projects">
+        <div *ngFor="let project of allProjects">
+            <img [src]="project.img" class="img-projects">
         </div>
     </div>
 </div>

@@ -8,9 +8,13 @@ import { Router } from '@angular/router';
 })
 export class PortfolioComponent implements OnInit {
 
+  allActive = false;
+  angularActive = false;
+  javascriptActive = false;
+
   @ViewChild('id-display') myDiv!: ElementRef; //! necessary to initialize 
 
-  constructor (private router: Router) {}
+  constructor(private router: Router) { }
 
   scrollDown() {
     console.log("scrollDown");
@@ -19,14 +23,14 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.navigate(["/"]);
-    this.languages = this.portfolioJSON;
+    this.filtered = this.allProjects;
   }
 
   ngAfterViewInit() {
     console.log(this.myDiv.nativeElement.innerHTML);
   }
 
-  portfolioJSON = [
+  allProjects = [
     {
       img: '/assets/img/ring-of-fire.PNG',
       language: 'angular',
@@ -73,15 +77,26 @@ export class PortfolioComponent implements OnInit {
     }
   ]
 
-  languages!: any[]; //! says "dont complain if undefined" 
+  filtered: any; //! says "dont complain if undefined" 
 
-  filter(language: string) {
-    if (language == this.portfolioJSON['angular']) {
-      this.languages = this.portfolioJSON.filter(site => site.language == language);
-    } else if (language == this.portfolioJSON['javascript']) {
-      this.languages = this.portfolioJSON.filter(site => site.language == language);
-    } else {
-      this.languages = this.portfolioJSON;
-    }
+  showAll() {
+    !this.allActive;
+    this.angularActive;
+    this.javascriptActive;
+    this.filtered = this.allProjects;
   }
+
+  showAngular(category: any) {
+    this.allActive;
+    !this.angularActive;
+    this.javascriptActive;
+   /*  this.filtered = this.allProjects.filter(project => project.category === category); */
+  }
+
+  showJavascript(category: any) {
+    this.allActive;
+    this.angularActive;
+    !this.javascriptActive;
+    /*  this.filtered = this.allProjects.filter(project => project.category === category); */
+   }
 }

@@ -48,6 +48,10 @@ p {
     }
 }
 
+.current {
+    background-color: var(--red);
+}
+
 .div-portfolio {
     display: flex;
     justify-content: center;
