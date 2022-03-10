@@ -10,6 +10,7 @@ export class ScrollingService {
   constructor() { }
 
   reachedTarget() {
+    console.log('service works');
     return window.scrollY > this.targetY;
   }
 }
