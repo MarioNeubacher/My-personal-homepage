@@ -17,8 +17,8 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // @HostListener('scroll', ['$event']) // for scroll events of the current element
-  @HostListener('window:scroll', ['$event']) // for window scroll events
+  // needs to be in component.ts not service
+  @HostListener('window:scroll', ['$event']) 
   onScroll(event: any) {
     console.log(this.scrolling.reachedTarget());
   }
