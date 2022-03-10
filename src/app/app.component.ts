@@ -10,9 +10,15 @@ import { ScrollingService } from './scrolling.service';
 
 export class AppComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  constructor(public router: Router, public scrolling: ScrollingService) { }
 
   ngOnInit(): void {
+  }
+
+  // needs to be in component.ts not service
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any) {
+    console.log(this.scrolling.reachedTarget());
   }
 
 }
