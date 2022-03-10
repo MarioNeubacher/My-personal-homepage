@@ -7,7 +7,7 @@
 
     <ul class="snip1135">
         <li [class.current]="scrolling.firstMenuSection()"><a href="/#home" data-hover="Home">Home</a></li>
-        <li [class.current]="scrolling.secondMenuSection()"><a href="/#projects" data-hover="Portfolio">Portfolio</a></li>
+        <li [class.current]="scrolling.secondMenuSection() || !hrefPortfolio" (click)="hrefPortfolioClicked()"><a href="/#projects" data-hover="Portfolio">Portfolio</a></li>
         <li><a href="/#technologies" data-hover="TECHNOLOGIES">TECHNOLOGIES</a></li>
         <li><a href="/#about" data-hover="ABOUT">ABOUT</a></li>
         <li><a href="/#contact" data-hover="Contact">Contact</a></li>

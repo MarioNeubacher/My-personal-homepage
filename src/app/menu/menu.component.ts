@@ -10,11 +10,17 @@ import { Inject } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  hrefPortfolio = false;
+
   @Input() selectedSection = true;
 
   constructor(private router: Router, public scrolling: ScrollingService) { }
 
   ngOnInit(): void {
+  }
+
+  hrefPortfolioClicked() {
+    !this.hrefPortfolio;
   }
 
 }
