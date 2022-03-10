@@ -11,6 +11,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ScrollingService } from './scrolling.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ScrollingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
