@@ -5,12 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class ScrollingService {
 
-  targetY = 10;
+  firstMenuSectionY = 660;
+  secondMenuSectionY = 1920;
 
   constructor() { }
 
-  reachedTarget() {
+  firstMenuSection() {
 /*     console.log('service works'); */
-    return window.scrollY > this.targetY;
+    return window.scrollY < this.firstMenuSectionY;
   }
+
+  secondMenuSection() {
+    /*     console.log('service works'); */
+        return window.scrollY > this.firstMenuSectionY && window.scrollY < this.secondMenuSectionY;
+      }
 }
