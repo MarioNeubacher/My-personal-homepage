@@ -1,9 +1,9 @@
 * {
     padding: 0px 0px;
     margin: 0px;
-    --red: #FA2759;
+    --red: #fa2759;
     --grey: #131111;
-    --green: #2DFCD8;
+    --green: #2dfcd8;
     color: white;
 }
 
@@ -29,8 +29,8 @@ p {
     align-items: center;
 }
 
-.div-section2background{
-    background-color: var(--grey); 
+.div-section2background {
+    background-color: var(--grey);
 }
 
 .div-projectsLanguage {
@@ -45,6 +45,24 @@ p {
 
     &:hover {
         background-color: var(--red);
+    }
+}
+
+.div-projectFilter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 360px;
+    padding-bottom: 10px;
+    animation: popUp 800ms 200ms backwards;
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 

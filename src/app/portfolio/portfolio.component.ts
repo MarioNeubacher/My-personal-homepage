@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { ScrollingService } from '../scrolling.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -59,7 +60,7 @@ export class PortfolioComponent implements OnInit {
 
   visibleProjects = this.projects;
 
-  constructor() { }
+  constructor(public scrolling: ScrollingService) { }
 
   ngOnInit(): void {
   }
