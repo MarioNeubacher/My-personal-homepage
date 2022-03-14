@@ -1,7 +1,7 @@
 <div id="projects" class="div-section div-section2background">
     <h1>My projects</h1>
 
-    <span>{{ scrolling.portfolioFilterSeeable() ? filter : '' }}</span>
+    <div>(innerHTML)="scrolling.portfolioFilterSeeable() ? filter : '' "</div>
 
     <div class="div-portfolio">
         <div *ngFor="let project of visibleProjects">
