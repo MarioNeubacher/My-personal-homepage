@@ -20,8 +20,8 @@ export class ScrollingService {
 
   portfolioFilterSeeable() {
     /*     console.log('service works'); */
-    return window.scrollY > this.portfolioFilterSeeableY;
     this.portfolioFilterLoaded;
+    return window.scrollY > this.portfolioFilterSeeableY;
   }
 
   secondMenuSection() {
