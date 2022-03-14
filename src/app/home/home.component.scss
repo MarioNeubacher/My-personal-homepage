@@ -283,12 +283,15 @@ p {
     margin: 50px 300px 0px 0px;
     color: var(--green);
     text-decoration: none;
-    animation: wiggle 7s infinite;
 
     &:hover {
         color: white;
         background-color: var(--green);
     }
+}
+
+.animation-wiggle {
+    animation: wiggle 7s infinite;
 }
 
 @keyframes wiggle {
