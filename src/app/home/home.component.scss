@@ -271,27 +271,11 @@ p {
     }
 }
 
-.div-contact {
-    cursor: pointer;
-    border: 1px solid var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 200px;
-    border-radius: 10px;
-    margin: 50px 300px 0px 0px;
-    color: var(--green);
-    text-decoration: none;
-
-    &:hover {
-        color: white;
-        background-color: var(--green);
-    }
-}
-
 .animation-wiggle {
     animation: wiggle 7s infinite;
+    position: relative;
+    height: 50px;
+    width: 200px;
 }
 
 @keyframes wiggle {
@@ -309,6 +293,26 @@ p {
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+.div-contact {
+    cursor: pointer;
+    border: 1px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 50px 300px 0px 0px;
+    color: var(--green);
+    text-decoration: none;
+    position: absolute;
+
+    &:hover {
+        color: white;
+        background-color: var(--green);
     }
 }
 
