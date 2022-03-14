@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
 export class ScrollingService {
 
   firstMenuSectionY = 660 / 2;
-  portfolioFilterSeeableY = 210;
   secondMenuSectionY = 1920;
 
   portfolioFilterLoaded = false;
@@ -16,12 +15,6 @@ export class ScrollingService {
   firstMenuSection() {
     /*     console.log('service works'); */
     return window.scrollY < this.firstMenuSectionY;
-  }
-
-  portfolioFilterSeeable() {
-    /*     console.log('service works'); */
-    this.portfolioFilterLoaded;
-    return window.scrollY > this.portfolioFilterSeeableY;
   }
 
   secondMenuSection() {

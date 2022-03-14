@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
   constructor(public router: Router, public scrolling: ScrollingService) { }
 
   ngOnInit(): void {
-
   }
 
   // needs to be in component.ts not service

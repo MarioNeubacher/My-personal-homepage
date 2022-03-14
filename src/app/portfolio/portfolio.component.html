@@ -1,15 +1,16 @@
 <div id="projects" class="div-section div-section2background">
-    <h1>My projects</h1>
+    <h1 data-aos="fade-left">My projects</h1>
 
-    <div *ngIf="scrolling.portfolioFilterSeeable() && !this.scrolling.portfolioFilterLoaded">
-        <div class="div-projectFilter">
-            <div id="id-all" [class.active]="currentFilter === ''" (click)="updateFilter()" class="div-projectsLanguage">All</div>
-            <div id="id-angular" [class.active]="currentFilter === 'Angular'" (click)="updateFilter('Angular')" class="div-projectsLanguage">Angular</div>
-            <div id="id-javascript" [class.active]="currentFilter === 'JavaScript'" (click)="updateFilter('JavaScript')" class="div-projectsLanguage">Java Script</div>
+    <div class="div-projectFilter" data-aos="fade-right">
+        <div id="id-all" [class.active]="currentFilter === ''" (click)="updateFilter()" class="div-projectsLanguage">All
         </div>
+        <div id="id-angular" [class.active]="currentFilter === 'Angular'" (click)="updateFilter('Angular')"
+            class="div-projectsLanguage">Angular</div>
+        <div id="id-javascript" [class.active]="currentFilter === 'JavaScript'" (click)="updateFilter('JavaScript')"
+            class="div-projectsLanguage">Java Script</div>
     </div>
 
-    <div class="div-portfolio">
+    <div class="div-portfolio" data-aos="fade-left">
         <div *ngFor="let project of visibleProjects">
             <img src="{{ '/assets/img/' + project.img }}" class="img-projects">
         </div>

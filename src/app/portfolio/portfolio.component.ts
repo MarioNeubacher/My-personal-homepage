@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScrollingService } from '../scrolling.service';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -63,6 +64,7 @@ export class PortfolioComponent implements OnInit {
   constructor(public scrolling: ScrollingService) { }
 
   ngOnInit(): void {
+    Aos.init();
   }
 
   updateFilter(newFilter?: string) {

@@ -54,16 +54,6 @@ p {
     align-items: center;
     width: 360px;
     padding-bottom: 10px;
-    animation: popUp 800ms forwards;
-}
-
-@keyframes popUp {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 .active {
