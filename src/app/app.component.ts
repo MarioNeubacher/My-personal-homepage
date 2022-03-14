@@ -1,3 +1,4 @@
+import { AotSummaryResolver } from '@angular/compiler';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScrollingService } from './scrolling.service';
@@ -13,6 +14,7 @@ export class AppComponent implements OnInit {
   constructor(public router: Router, public scrolling: ScrollingService) { }
 
   ngOnInit(): void {
+
   }
 
   // needs to be in component.ts not service

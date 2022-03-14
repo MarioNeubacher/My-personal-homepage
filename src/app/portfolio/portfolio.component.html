@@ -1,7 +1,13 @@
 <div id="projects" class="div-section div-section2background">
     <h1>My projects</h1>
 
-    <div>(innerHTML)="scrolling.portfolioFilterSeeable() ? filter : '' "</div>
+    <div *ngIf="scrolling.portfolioFilterSeeable() && !this.scrolling.portfolioFilterLoaded">
+        <div class="div-projectFilter">
+            <div id="id-all" [class.active]="currentFilter === ''" (click)="updateFilter()" class="div-projectsLanguage">All</div>
+            <div id="id-angular" [class.active]="currentFilter === 'Angular'" (click)="updateFilter('Angular')" class="div-projectsLanguage">Angular</div>
+            <div id="id-javascript" [class.active]="currentFilter === 'JavaScript'" (click)="updateFilter('JavaScript')" class="div-projectsLanguage">Java Script</div>
+        </div>
+    </div>
 
     <div class="div-portfolio">
         <div *ngFor="let project of visibleProjects">

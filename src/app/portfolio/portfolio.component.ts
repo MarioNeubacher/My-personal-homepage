@@ -10,13 +10,6 @@ import { ScrollingService } from '../scrolling.service';
 export class PortfolioComponent implements OnInit {
 
   currentFilter = '';
-  filter = `
-    < div[class.div - projectFilter]="">
-      <div id="id-all"[class.active] = "currentFilter === ''"(click) = "updateFilter()" class="div-projectsLanguage" > All < /div>
-      < div id = "id-angular"[class.active] = "currentFilter === 'Angular'"(click) = "updateFilter('Angular')" class="div-projectsLanguage" > Angular < /div>
-      < div id = "id-javascript"[class.active] = "currentFilter === 'JavaScript'"(click) = "updateFilter('JavaScript')" class="div-projectsLanguage" > Java Script < /div>
-    < /div>
-  `;
 
   projects = [
     {

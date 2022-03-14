@@ -9,6 +9,8 @@ export class ScrollingService {
   portfolioFilterSeeableY = 210;
   secondMenuSectionY = 1920;
 
+  portfolioFilterLoaded = false;
+
   constructor() { }
 
   firstMenuSection() {
@@ -19,6 +21,7 @@ export class ScrollingService {
   portfolioFilterSeeable() {
     /*     console.log('service works'); */
     return window.scrollY > this.portfolioFilterSeeableY;
+    this.portfolioFilterLoaded;
   }
 
   secondMenuSection() {
