@@ -271,11 +271,39 @@ p {
     }
 }
 
+[data-aos="fade-left"] {
+    @for $i from 1 through 60 {
+      body[data-aos-duration='#{$i * 50}'] &,
+      &[data-aos][data-aos-duration='#{$i * 50}'] {
+        transition-duration: #{$i * 50}ms;
+      }
+  
+      body[data-aos-delay='#{$i * 50}'] &,
+      &[data-aos][data-aos-delay='#{$i * 50}'] {
+        transition-delay: 10000 !important;
+  
+        &.aos-animate {
+          transition-delay: #{$i * 50}ms;
+        }
+      }
+    }
+  }
+
 .animation-wiggle {
     animation: wiggle 7s infinite;
     position: relative;
     height: 50px;
     width: 200px;
+    margin-top: 25px;
+}
+
+[date-aos="fade-left"] {
+    opacity: 0;
+
+    &.aos-animate {
+        opacity: 1;
+        animation-delay: 5000;
+    }
 }
 
 @keyframes wiggle {
@@ -305,7 +333,6 @@ p {
     height: 50px;
     width: 200px;
     border-radius: 10px;
-    margin: 50px 300px 0px 0px;
     color: var(--green);
     text-decoration: none;
     position: absolute;
