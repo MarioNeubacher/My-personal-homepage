@@ -7,6 +7,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: 'data-protection', component: DataProtectionComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent},
   { path: 'technologies', component: TechnologiesComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent},
+  { path: 'footer', component: FooterComponent}
 ];
 
 @NgModule({

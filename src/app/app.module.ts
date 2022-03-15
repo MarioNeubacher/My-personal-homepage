@@ -12,6 +12,7 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ScrollingService } from './scrolling.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ScrollingService } from './scrolling.service';
     PortfolioComponent,
     TechnologiesComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

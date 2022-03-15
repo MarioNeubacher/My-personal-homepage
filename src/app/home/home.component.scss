@@ -255,54 +255,63 @@ p {
     }
 }
 
+.div-dropDownArrow {
+    display:flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 136.5px;
+    animation: fadeIn 10s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 .img-profile {
     height: 500px;
     width: 400px;
     border-radius: 200%;
-    animation: animate-img-profile 800ms 200ms backwards;
 }
 
-@keyframes animate-img-profile {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
+.div-home {
+    color: white; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 85px 0px 0px 0px; 
+    margin: 0px;
 }
 
-[data-aos="fade-left"] {
-    @for $i from 1 through 60 {
-      body[data-aos-duration='#{$i * 50}'] &,
-      &[data-aos][data-aos-duration='#{$i * 50}'] {
-        transition-duration: #{$i * 50}ms;
-      }
-  
-      body[data-aos-delay='#{$i * 50}'] &,
-      &[data-aos][data-aos-delay='#{$i * 50}'] {
-        transition-delay: 10000 !important;
-  
-        &.aos-animate {
-          transition-delay: #{$i * 50}ms;
-        }
-      }
-    }
-  }
+.animation-slideIn {
+    animation: slideIn 7.5s;
+}
 
-.animation-wiggle {
-    animation: wiggle 7s infinite;
-    position: relative;
+@keyframes slideIn {
+    0% { transform: translateX(-250%); }
+    85% { transform: translateX(-250%);}
+    100% {transform: translateX(0%);}
+}
+
+.div-contact {
+    cursor: pointer;
+    border: 1px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 50px;
     width: 200px;
-    margin-top: 25px;
-}
+    border-radius: 10px;
+    color: var(--green);
+    text-decoration: none;
+    margin: 25px 0px;
+    z-index: 2;
+    animation: wiggle 7s infinite;
 
-[date-aos="fade-left"] {
-    opacity: 0;
-
-    &.aos-animate {
-        opacity: 1;
-        animation-delay: 5000;
+    &:hover {
+        color: white;
+        background-color: var(--green);
     }
 }
 
@@ -321,25 +330,6 @@ p {
     }
     100% {
         transform: rotate(0deg);
-    }
-}
-
-.div-contact {
-    cursor: pointer;
-    border: 1px solid var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 200px;
-    border-radius: 10px;
-    color: var(--green);
-    text-decoration: none;
-    position: absolute;
-
-    &:hover {
-        color: white;
-        background-color: var(--green);
     }
 }
 
