@@ -19,8 +19,4 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  hrefPortfolioClicked() {
-    !this.hrefPortfolio;
-  }
-
 }

@@ -14,19 +14,22 @@
     <div class="div-portfolio">
         <div *ngFor="let project of visibleProjects" style="position: relative;">
             <img src="{{ '/assets/img/' + project.img }}" data-aos="flip-left" class="img-projects">
+
             <div class="project-overlay">
                 <h1 style="text-align: center;">{{ project.title }}</h1>
+                
                 <div class="project-btn">
                     <button>
-                        <img style="height: 21px; margin-left: 2.5px;" src="/assets/img/external-link.png">
+                        <img style="height: 21px; margin: 0px -3px 0px 2.5px;" src="/assets/img/external-link.png">
                         <a href="{{ project.app_link }}">Open</a>
                     </button>
                     <div style="display: flex;">
                         <button style="border-radius: 5px 0px 0px 5px ;">
-                            <img style="height: 22.5px; margin-left: 2.5px;" src="/assets/img/github.png">
+                            <img style="height: 22.5px; margin: 0px -3px 0px 2.5px;" src="/assets/img/github.png">
                             <a href="{{ project.github_link }}">GitHub</a>
                         </button>
                         <button style="border-radius: 0px 5px 5px 0px ;">
+                            <img style="height: 21px; margin: 0px -3px 0px 2.5px;" src="/assets/img/list.png">
                             <a href="{{ project.JsDoc }}">JSDOC</a>
                         </button>
                         

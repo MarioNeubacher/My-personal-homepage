@@ -10,6 +10,9 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  /**
+   * This function loads the functions init if website loads 
+   */
   ngOnInit(): void {
     Aos.init();
   }

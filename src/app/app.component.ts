@@ -15,9 +15,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  // needs to be in component.ts not service
-  @HostListener('window:scroll', ['$event'])
+ 
+  /**
+   * This function is necessary for window.scroll query in scrolling.service 
+   * @param event - This variable determines which scroll direction 
+   */
+  @HostListener('window:scroll', ['$event'])  // needs to be in component.ts not service
   onScroll(event: any) {
     console.log(window.scrollY);
   }
