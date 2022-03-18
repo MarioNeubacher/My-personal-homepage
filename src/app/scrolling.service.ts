@@ -5,8 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class ScrollingService {
 
-  firstMenuSectionY = 660 / 2;
-  secondMenuSectionY = 1920;
+  firstMenuSectionY = 660;
+  secondMenuSectionY = 1772;
+  thirdMenuSectionY = 2850;
 
   portfolioFilterLoaded = false;
 
@@ -14,7 +15,7 @@ export class ScrollingService {
 
   /**
    * This function checks for the menu tab css changes if scrolled past certan pixel amount
-   * @returns - true if scrolled past 330px
+   * @returns - true if scrolled past first section
    */
   firstMenuSection() {
     /*     console.log('service works'); */
@@ -23,10 +24,19 @@ export class ScrollingService {
 
   /**
    * This function checks for the menu tab css changes if scrolled past certan pixel amount
-   * @returns - true if scrolled past 330px and not past 1920px
+   * @returns - true if scrolled past first section and not past second section
    */
   secondMenuSection() {
     /*     console.log('service works'); */
     return window.scrollY > this.firstMenuSectionY && window.scrollY < this.secondMenuSectionY;
+  }
+
+ /**
+   * This function checks for the menu tab css changes if scrolled past certan pixel amount
+   * @returns - true if scrolled past second section and not past third section
+   */
+  thirdMenuSection() {
+    /*     console.log('service works'); */
+    return window.scrollY > this.secondMenuSectionY && window.scrollY < this.thirdMenuSectionY;
   }
 }

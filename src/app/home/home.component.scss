@@ -273,6 +273,7 @@ p {
     height: 500px;
     width: 400px;
     border-radius: 200%;
+    transform: translateZ(-10px) scale(2);
 }
 
 .div-home {
@@ -307,7 +308,7 @@ p {
     text-decoration: none;
     margin: 25px 0px;
     z-index: 2;
-    animation: wiggle 7s infinite;
+    animation: wiggle 6s infinite;
 
     &:hover {
         color: white;

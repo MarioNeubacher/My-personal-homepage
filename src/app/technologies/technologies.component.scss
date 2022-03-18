@@ -8,8 +8,8 @@
 }
 
 h1 {
-    padding: 20px 20px 30px 20px;
-    margin-top: 40px;
+    padding: 20px 20px 40px 20px;
+    margin: 40px 0px -10px 0px;
 }
 
 .div-section {
@@ -20,5 +20,35 @@ h1 {
 }
 
 .div-section1background{
-    background-color: black; 
+    background-color: var(--grey); 
+}
+
+.div-technologies {
+    background-color: white; 
+    height: 110px; 
+    width: 285px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 25px 60px 2.5px;
+    box-shadow: inset -5px -5px 5px rgb(0 0 0 / 15%), inset 5px 5px 5px rgb(255 255 255 / 50%);
+}
+
+.div-img {
+    box-shadow: inset -5px -5px 5px rgb(0 0 0 / 15%), inset 5px 5px 5px rgb(255 255 255 / 50%);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: -70px;
+}
+
+.img {
+    height: 27.5px;
+    width: auto;
 }
