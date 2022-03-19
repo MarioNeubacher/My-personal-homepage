@@ -7,20 +7,33 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  bullets = [
+    {
+      img: 'walk-line.png',
+      title: 'MY JOURNEY BEGAN',
+      text: 'placeholder',
+    },
+    {
+      img: '',
+      title: '',
+      text: '',
+    },
+    {
+      img: '',
+      title: '',
+      text: '',
+    },
+    {
+      img: '',
+      title: '',
+      text: '',
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
 
-  }
-
-  renderAboutme() {
-    document.getElementById('id-aboutMe').innerHTML = `
-      <div style="display: flex; flex-direction: column;">
-        <div>placeholder</div>
-        <div>MY JOURNEY BEGAN</div>
-        <div>placeholder</div>
-      </div>
-    `;
   }
 
 }

@@ -15,6 +15,12 @@
     <div data-aos="fade-zoom-in" style="background-color: var(--green); height: 0.5px; width: 900px; margin-bottom: 75px;"></div>
 
     <div style="display: flex">
-        <div id="id-aboutMe"></div>
+        <div *ngFor="let bullet of bullets">
+            <div style="display: flex; flex-direction: column;">
+                <div>placeholder</div>
+                <div>{{ bullets.title }}</div>
+                <div>placeholder</div>
+              </div>
+        </div>
     </div>
 </div>
