@@ -115,7 +115,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   /**
-   * This function changes conditional css class based on currentFilter and only shows the projects with the same category 
+   * This click function changes conditional css class based on currentFilter and only shows the projects with the same category 
    * @param newFilter - This variable is one of the project array categories 
    */
   updateFilter(newFilter?: string) {
