@@ -6,8 +6,10 @@ import { Injectable } from '@angular/core';
 export class ScrollingService {
 
   firstMenuSectionY = 660;
-  secondMenuSectionY = 1772;
-  thirdMenuSectionY = 2850;
+  secondMenuSectionY = 1792;
+  thirdMenuSectionY = 3575;
+  fourthMenuSectionY = 3530;
+  fifthMenuSectionY = 4000;
 
   portfolioFilterLoaded = false;
 
@@ -38,5 +40,14 @@ export class ScrollingService {
   thirdMenuSection() {
     /*     console.log('service works'); */
     return window.scrollY > this.secondMenuSectionY && window.scrollY < this.thirdMenuSectionY;
+  }
+
+  /**
+   * This function checks for the menu tab css changes if scrolled past certan pixel amount
+   * @returns - true if scrolled past third section and not past third section
+   */
+   fourthMenuSection() {
+    /*     console.log('service works'); */
+    return window.scrollY > this.thirdMenuSectionY && window.scrollY < this.fifthMenuSectionY;
   }
 }
