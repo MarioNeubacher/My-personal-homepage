@@ -9,7 +9,8 @@ export class ScrollingService {
   secondMenuSectionY = 1792;
   thirdMenuSectionY = 3575;
   fourthMenuSectionY = 3530;
-  fifthMenuSectionY = 4000;
+  fifthMenuSectionY = 4462;
+  sixthMenuSectionY = 4700;
 
   portfolioFilterLoaded = false;
 
@@ -49,5 +50,14 @@ export class ScrollingService {
    fourthMenuSection() {
     /*     console.log('service works'); */
     return window.scrollY > this.thirdMenuSectionY && window.scrollY < this.fifthMenuSectionY;
+  }
+
+  /**
+   * This function checks for the menu tab css changes if scrolled past certan pixel amount
+   * @returns - true if scrolled past third section and not past third section
+   */
+   fifthMenuSection() {
+    /*     console.log('service works'); */
+    return window.scrollY > this.fifthMenuSectionY && window.scrollY < this.sixthMenuSectionY;
   }
 }
