@@ -60,6 +60,10 @@ export class TechnologiesComponent implements OnInit {
     {
       img: 'icons8-database-52 2.png',
       name: 'Databases',
+    },
+    {
+      img: 'security.png',
+      name: 'IT-Security',
     }
   ]
 

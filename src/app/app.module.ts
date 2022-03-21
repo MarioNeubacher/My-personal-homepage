@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ScrollingService } from './scrolling.service';
 import { FooterComponent } from './footer/footer.component';
+import { IconSourcesComponent } from './icon-sources/icon-sources.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     TechnologiesComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    IconSourcesComponent
   ],
   imports: [
     BrowserModule,

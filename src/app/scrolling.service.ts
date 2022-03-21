@@ -10,7 +10,7 @@ export class ScrollingService {
   thirdMenuSectionY = 3575;
   fourthMenuSectionY = 3530;
   fifthMenuSectionY = 4462;
-  sixthMenuSectionY = 4700;
+  sixthMenuSectionY = 5000;
 
   portfolioFilterLoaded = false;
 

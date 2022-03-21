@@ -4,5 +4,27 @@
     --red: #fa2759;
     --grey: #131111;
     --green: #2dfcd8;
-    color: black;
+    color: white;
+    font-family: Spartan, sans-serif;
+    font-size: 17.5px;
+}
+
+img {
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+    filter: invert(100%);
+    &:hover {
+        filter: invert(40%);
+    }
+}
+
+a {
+    text-decoration: none; 
+    font-family: Spartan, sans-serif;
+    margin: 10px;
+
+    &:hover {
+        filter: invert(40%);
+    }
 }
