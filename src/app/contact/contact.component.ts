@@ -12,4 +12,12 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  alertAndClear() {
+    alert('Your email was sent!');
+    /* setTimeout(() => {
+      document.getElementById('id-form')?.innerHTML = `
+        action="http://mario-neubacher.developerakademie.com/send_mail.php"
+      `;
+    }, 1000); */
+  }
 }

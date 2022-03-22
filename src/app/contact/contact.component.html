@@ -17,11 +17,11 @@
                                 style="color: var(--green); cursor: pointer; filter: invert(25%);">neubacher.mario00@gmail.com</span>
                         </div>
                         <form action="http://mario-neubacher.developerakademie.com/send_mail.php"
-                            method="post">
+                            method="post" onsubmit="alertAndClear()">
                             <div class="headline-contact">Name</div>
                             <input required type="text" name="name" placeholder="Enter your full name">
                             <div class="headline-contact">Email address</div>
-                            <input required type="email" placeholder="Enter your Email address">
+                            <input required type="email" name="email" placeholder="Enter your Email address">
                             <div class="headline-contact">Message</div>
                             <textarea required type="text" name="message" placeholder="Enter your message" cols="40" rows="7"></textarea>
                             <div style="display: flex; justify-content: flex-end; width: 520px;">
