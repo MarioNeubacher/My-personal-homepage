@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScrollingService } from '../scrolling.service';
-import { Inject } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -11,7 +10,8 @@ import { Inject } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   hrefPortfolio = false;
-
+  
+  @Input() onePage = true; //@Input() enables to change variable outside of this component
   @Input() selectedSection = true;
 
   constructor(private router: Router, public scrolling: ScrollingService) { }

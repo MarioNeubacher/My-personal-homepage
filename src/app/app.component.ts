@@ -1,4 +1,3 @@
-import { AotSummaryResolver } from '@angular/compiler';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScrollingService } from './scrolling.service';
@@ -9,12 +8,9 @@ import { ScrollingService } from './scrolling.service';
   styleUrls: ['./app.component.scss'],
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
 
   constructor(public router: Router, public scrolling: ScrollingService) { }
-
-  ngOnInit(): void {
-  }
  
   /**
    * This function is necessary for window.scroll query in scrolling.service 

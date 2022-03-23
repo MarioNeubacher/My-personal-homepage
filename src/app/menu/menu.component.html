@@ -5,12 +5,20 @@
         N
     </a>
 
-    <ul class="snip1135">
-        <li [class.current]="scrolling.firstMenuSection() && { path: ''}"><a href="/#home" data-hover="Home">Home</a></li>
-        <li [class.current]="scrolling.secondMenuSection() && { path: ''}"><a href="/#technologies" data-hover="TECHNOLOGIES">TECHNOLOGIES</a></li>
-        <li [class.current]="scrolling.thirdMenuSection() && { path: ''}"><a href="/#projects" data-hover="Portfolio">Portfolio</a></li>
-        <li [class.current]="scrolling.fourthMenuSection() && { path: ''}"><a href="/#about" data-hover="ABOUT">ABOUT</a></li>
-        <li [class.current]="scrolling.fifthMenuSection() && { path: ''}"><a href="/#contact" data-hover="Contact">Contact</a></li>
+    <ul *ngIf="onePage" class="snip1135">
+        <li [class.current]="scrolling.firstMenuSection()"}><a href="/#home" data-hover="Home">Home</a></li>
+        <li [class.current]="scrolling.secondMenuSection()"}><a href="/#technologies" data-hover="TECHNOLOGIES">TECHNOLOGIES</a></li>
+        <li [class.current]="scrolling.thirdMenuSection()"}><a href="/#projects" data-hover="Portfolio">Portfolio</a></li>
+        <li [class.current]="scrolling.fourthMenuSection()"}><a href="/#about" data-hover="ABOUT">ABOUT</a></li>
+        <li [class.current]="scrolling.fifthMenuSection()"}><a href="/#contact" data-hover="Contact">Contact</a></li>
+    </ul>
+
+    <ul *ngIf="!onePage" class="snip1135">
+        <li><a href="/#home" data-hover="Home">Home</a></li>
+        <li><a href="/#technologies" data-hover="TECHNOLOGIES">TECHNOLOGIES</a></li>
+        <li><a href="/#projects" data-hover="Portfolio">Portfolio</a></li>
+        <li><a href="/#about" data-hover="ABOUT">ABOUT</a></li>
+        <li><a href="/#contact" data-hover="Contact">Contact</a></li>
     </ul>
 
 </header>
