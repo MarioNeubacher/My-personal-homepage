@@ -10,7 +10,7 @@ import { ScrollingService } from './scrolling.service';
 
 export class AppComponent {
 
-  constructor(public router: Router, public scrolling: ScrollingService) { }
+  constructor(public router: Router, public scrolling: ScrollingService) { } //public so get routes of other components 
  
   /**
    * This function is necessary for window.scroll query in scrolling.service 

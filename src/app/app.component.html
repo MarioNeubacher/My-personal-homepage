@@ -1,3 +1,3 @@
-<app-menu [onePage]="false"></app-menu> <!-- [onePage]="router.url !== '/'" -->
+<app-menu [onePage]="router.url == '/'"></app-menu> <!-- [onePage]="true" -->
 <router-outlet></router-outlet> <!-- switches between router links in footer -->
 <app-footer></app-footer>
