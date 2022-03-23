@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
 
   hrefPortfolio = false;
   
-  @Input() onePage = true; //@Input() enables to change variable outside of this component
+  @Input() onePage = false; //@Input() enables to change variable outside of this component
   @Input() selectedSection = true;
 
   constructor(public router: Router, public scrolling: ScrollingService) { }
