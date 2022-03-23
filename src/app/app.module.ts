@@ -14,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ScrollingService } from './scrolling.service';
 import { FooterComponent } from './footer/footer.component';
 import { IconSourcesComponent } from './icon-sources/icon-sources.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
+import { OnePageComponent } from './one-page/one-page.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { IconSourcesComponent } from './icon-sources/icon-sources.component';
     AboutComponent,
     ContactComponent,
     FooterComponent,
-    IconSourcesComponent
+    IconSourcesComponent,
+    DisclaimerComponent,
+    OnePageComponent
   ],
   imports: [
     BrowserModule,
