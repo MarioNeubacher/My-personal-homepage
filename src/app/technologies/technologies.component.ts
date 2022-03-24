@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateCompiler } from '@ngx-translate/core';
 import * as Aos from 'aos';
 
 @Component({
@@ -47,7 +48,7 @@ export class TechnologiesComponent implements OnInit {
     },
     {
       img: 'Group 20.png',
-      name: 'Design Thinking', //{{ 'design-thinking' | translate }}
+      name: translate.instant('design-thinking'), //{{ 'design-thinking' | translate }}
     },
     {
       img: 'icons8-rest-api-80 2.png',
