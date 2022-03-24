@@ -16,6 +16,13 @@ import { FooterComponent } from './footer/footer.component';
 import { IconSourcesComponent } from './icon-sources/icon-sources.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { OnePageComponent } from './one-page/one-page.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json' );
+}
 
 @NgModule({
   declarations: [
@@ -35,7 +42,16 @@ import { OnePageComponent } from './one-page/one-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en-US',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     ScrollingService
