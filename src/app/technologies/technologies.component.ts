@@ -47,7 +47,7 @@ export class TechnologiesComponent implements OnInit {
     },
     {
       img: 'Group 20.png',
-      name: 'Design Thinking',
+      name: 'Design Thinking', //{{ 'design-thinking' | translate }}
     },
     {
       img: 'icons8-rest-api-80 2.png',

@@ -2,5 +2,10 @@
     "home": "STARTSEITE",
     "technologies": "TECHNOLOGIEN",
     "about": "ÜBER MICH",
-    "contact": "KONTAKT"
+    "contact": "KONTAKT",
+    "home-firstLine": "Hi, ich bin",
+    "home-thirdLine": "Entwickl",
+    "btn-contact": "Kontaktiere mich",
+    "headline-technologies": "Technologien",
+    "design-thinking": "Gestalterisches Denken"
 }

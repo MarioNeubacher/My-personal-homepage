@@ -2,5 +2,10 @@
     "home": "HOME",
     "technologies": "TECHNOLOGIES",
     "about": "ABOUT",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "home-firstLine": "Hi, I'm",
+    "home-thirdLine": "Develop",
+    "btn-contact": "Contact me",
+    "headline-technologies": "Technologies",
+    "design-thinking": "Design Thinking"
 }

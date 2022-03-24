@@ -8,9 +8,13 @@ import { ScrollingService } from './scrolling.service';
   styleUrls: ['./app.component.scss'],
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   constructor(public router: Router, public scrolling: ScrollingService) { } //public so get routes of other components 
+  
+  ngOnInit(): void {
+    language: 'en-EN';
+  }
  
   /**
    * This function is necessary for window.scroll query in scrolling.service 
