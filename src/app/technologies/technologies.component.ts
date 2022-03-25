@@ -49,7 +49,7 @@ export class TechnologiesComponent implements OnInit {
     },
     {
       img: 'Group 20.png',
-      name: translate.instant.('design-thinking'), //{{ 'design-thinking' | translate }}
+      name: 'Design Thinking', //{{ 'design-thinking' | translate }} /* translate.instant.('design-thinking) */
     },
     {
       img: 'icons8-rest-api-80 2.png',
