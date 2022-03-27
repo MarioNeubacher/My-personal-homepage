@@ -3,7 +3,8 @@
     <h1 data-aos="fade-left">Portfolio</h1>
 
     <div class="div-projectFilter" data-aos="fade-right">
-        <div id="id-all" [class.active]="currentFilter === ''" (click)="updateFilter()" class="div-projectsLanguage">All
+        <div id="id-all" [class.active]="currentFilter === ''" (click)="updateFilter()" class="div-projectsLanguage">
+            {{ 'all' | translate }}
         </div>
         <div id="id-angular" [class.active]="currentFilter === 'Angular'" (click)="updateFilter('Angular')"
             class="div-projectsLanguage">Angular</div>
@@ -16,12 +17,12 @@
             <img src="{{ '/assets/img/' + project.img }}" data-aos="flip-left" class="img-projects">
 
             <div class="project-overlay">
-                <h1 style="text-align: center;">{{ project.title }}</h1>
-                
+                <h1 style="text-align: center;">{{ project.title | translate }}</h1>
+
                 <div class="project-btn">
                     <button>
                         <img style="height: 21px; margin: 0px -3px 0px 2.5px;" src="/assets/img/external-link.png">
-                        <a href="{{ project.app_link }}">Open</a>
+                        <a href="{{ project.app_link }}">{{ 'open' | translate }}</a>
                     </button>
                     <div style="display: flex;">
                         <button style="border-radius: 5px 0px 0px 5px ;">
@@ -32,7 +33,7 @@
                             <img style="height: 21px; margin: 0px -3px 0px 2.5px;" src="/assets/img/list.png">
                             <a href="{{ project.JsDoc }}">JSDOC</a>
                         </button>
-                        
+
                     </div>
                 </div>
             </div>

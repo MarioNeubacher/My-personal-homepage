@@ -49,7 +49,7 @@ export class TechnologiesComponent implements OnInit {
     },
     {
       img: 'Group 20.png',
-      name: 'Design Thinking', //{{ 'design-thinking' | translate }} /* translate.instant.('design-thinking) */
+      name: 'design-thinking', 
     },
     {
       img: 'icons8-rest-api-80 2.png',
@@ -57,15 +57,15 @@ export class TechnologiesComponent implements OnInit {
     },
     {
       img: 'icons8-test-lab-96 2.png',
-      name: 'Test automation',
+      name: 'test-automation',
     },
     {
       img: 'icons8-database-52 2.png',
-      name: 'Databases',
+      name: 'databases',
     },
     {
       img: 'security.png',
-      name: 'IT-Security',
+      name: 'it-security',
     }
   ];
 

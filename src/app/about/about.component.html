@@ -4,10 +4,10 @@
         <img data-aos="fade-left" src="assets/img/3.png" style="height: 300px; border-radius: 25px; width: auto; margin: 75px 40px 40px 40px">
         <div data-aos="fade-right" style="display: flex; flex-direction: column;">
             <div style="text-align: center; font-weight: 900; margin-bottom: 10px; font-size: 30px;">
-                About me.
+                {{ 'about-headline' | translate }}
             </div>
             <div style="width: 400px; text-align: center;">
-                “ I love to create solutions that provide value and have a beautiful design. If you do what you love, you will never have to work again ”
+                {{ 'about-text' | translate }} 
             </div>
         </div>
     </div>
@@ -15,13 +15,13 @@
     <div data-aos="fade-zoom-in" style="background-color: var(--green); height: 0.5px; width: 952.5px; margin-bottom: 75px;"></div>
 
     <div style="display: flex">
-        <div *ngFor="let bullet of bullets" style="width: 230px" data-aos="zoom-out">
+        <div *ngFor="let bullet of bullets" style="width: 240px" data-aos="zoom-out">
             <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 100px">
                 <div>
                     <img class="img" src="{{ '/assets/img/' + bullet.img }}">
                 </div>
-                <div style="margin: 20px; display: flex; align-items: center; justify-content: center; height: 15px">{{ bullet.title }}</div>
-                <div style="margin: 10px; display: flex; align-items: center">{{ bullet.text }}</div>
+                <div style="margin: 20px; display: flex; align-items: center; justify-content: center; height: 15px">{{ bullet.title | translate }}</div>
+                <div style="margin: 10px; display: flex; align-items: center">{{ bullet.text | translate }}</div>
             </div>
         </div>
     </div>

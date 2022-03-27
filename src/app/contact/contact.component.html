@@ -7,25 +7,22 @@
                 <article>
                     <div class="div-frameContent">
                         <div style="color: var(--green); font-size: 40px; font-weight: 700; margin: 50px 0px 10px 0px;">
-                            Contact
-                            me.
+                            {{ 'contact-headline' | translate }}
                         </div>
-                        <div style="color: #A8A8A8; margin-bottom: 10px; font-size: 12.5px;">Get in touch via the link
-                            below or
-                            by
-                            emailing me <span
-                                style="color: var(--green); cursor: pointer; filter: invert(25%);">neubacher.mario00@gmail.com</span>
+                        <div style="color: #A8A8A8; margin-bottom: 10px; font-size: 12.5px;">
+                            {{ 'contact-h2' | translate }}
+                            <span style="color: var(--green); cursor: pointer; filter: invert(25%);">neubacher.mario00@gmail.com</span>
                         </div>
                         <form action="http://mario-neubacher.developerakademie.com/send_mail.php" method="post">
                             <div class="headline-contact">Name</div>
-                            <input required type="text" name="name" placeholder="Enter your full name">
+                            <input required type="text" name="name" placeholder="{{ 'input-name' | translate }}">
                             <div class="headline-contact">Email address</div>
-                            <input required type="email" name="email" placeholder="Enter your Email address">
+                            <input required type="email" name="email" placeholder="{{ 'input-email' | translate }}">
                             <div class="headline-contact">Message</div>
-                            <textarea required type="text" name="message" placeholder="Enter your message" cols="40"
+                            <textarea required type="text" name="message" placeholder="{{ 'textarea-message' | translate }}" cols="40"
                                 rows="7"></textarea>
-                            <div style="display: flex; justify-content: flex-end; width: 520px;">
-                                <button (click)="alert()" type="submit" class="btn-send">Send</button>
+                            <div style="display: flex; justify-content: flex-end">
+                                <button (click)="alert()" type="submit" class="btn-send">{{ 'btn-send' | translate }}</button>
                             </div>
                         </form>
                     </div>

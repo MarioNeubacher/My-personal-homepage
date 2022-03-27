@@ -16,7 +16,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'ring-of-fire.PNG',
       category: 'angular',
-      title: 'Drinking card game',
+      title: 'ring-of-fire',
       JsDoc: '',
       app_link: '',
       github_link: 'https://github.com/MarioNeubacher/ringoffire',
@@ -24,7 +24,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'homepage.PNG',
       category: 'angular',
-      title: 'Personal homepage',
+      title: 'homepage',
       JsDoc: '',
       app_link: '',
       github_link: 'https://github.com/MarioNeubacher/My-personal-homepage',
@@ -32,7 +32,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'el-pollo-loco.png',
       category: 'javascript',
-      title: 'Jump-and-run game based on object-oriented programming',
+      title: 'el-pollo-loco',
       JsDoc: '',
       app_link: '',
       github_link: 'https://github.com/MarioNeubacher/El-Pollo-Loco',
@@ -40,7 +40,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'kanban.png',
       category: 'javascript',
-      title: 'Project management tool',
+      title: 'kanban',
       JsDoc: '',
       app_link: '',
       github_link: 'https://github.com/MelanieKell/Join-Kanban',
@@ -48,7 +48,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'pokedex.PNG',
       category: 'javascript',
-      title: 'Pokémon encyclopedia based on RESTful API',
+      title: 'pokedex',
       JsDoc: '',
       app_link: 'http://mario-neubacher.developerakademie.com/14.%20Pokedex/pokedex.html',
       github_link: 'https://github.com/MarioNeubacher/Pokedex',
@@ -56,7 +56,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'tictactoe.PNG',
       category: 'javascript',
-      title: 'Tic tac toe',
+      title: 'tic-tac-toe',
       JsDoc: '',
       app_link: '',
       github_link: 'https://github.com/MarioNeubacher/tictactoe',
@@ -72,7 +72,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'instagram.PNG',
       category: 'javascript',
-      title: 'Social media plattform',
+      title: 'social-media-plattform',
       JsDoc: '',
       app_link: '',
       github_link: 'https://github.com/MarioNeubacher/Social-media-plattform',
@@ -80,7 +80,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'lieferando.PNG',
       category: 'javascript',
-      title: 'Food delivery',
+      title: 'lieferando',
       JsDoc: '',
       app_link: '',
       github_link: 'https://github.com/MarioNeubacher/Food-delivery-website',
@@ -88,7 +88,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'photos.PNG',
       category: 'javascript',
-      title: 'Photo gallery',
+      title: 'photos',
       JsDoc: '',
       app_link: '',
       github_link: 'https://github.com/MarioNeubacher/Photo-gallery',
@@ -96,7 +96,7 @@ export class PortfolioComponent implements OnInit {
     {
       img: 'notes.PNG',
       category: 'javascript',
-      title: 'Note app',
+      title: 'notes',
       JsDoc: 'http://127.0.0.1:5500/out/index.html',
       app_link: 'https://marioneubacher.github.io/Note-app/',
       github_link: 'https://github.com/MarioNeubacher/Note-app',
