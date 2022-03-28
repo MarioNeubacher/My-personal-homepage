@@ -146,3 +146,14 @@ textarea {
   color: #fff;
   position: relative;
 }
+
+.email {
+  color: var(--green); 
+  cursor: pointer; 
+  filter: invert(15%); 
+  text-decoration: none;
+
+  &:hover {
+    filter: invert(30%); 
+  }
+}
