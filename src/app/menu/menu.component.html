@@ -1,16 +1,26 @@
-<header>
-    <a  style="cursor: pointer; color: white; font-size: 35px; font-weight: bold; margin-top: 15px;" href="#home">
-        M
+<header [class.bg-white]="darkModeToggle">
+    <a style="cursor: pointer; color: white; font-weight: bold; margin-top: 20px;" href="#home">
+        <span [class.black-color]="darkModeToggle">M</span>
         <span style="color: #FA2759; font-weight: 800">.</span>
-        N
+        <span [class.black-color]="darkModeToggle">N</span>
     </a>
 
-    <ul class="snip1135"> <!-- *ngIf="onePage" -->
-        <li [class.current]="scrolling.firstMenuSection() && onePage"><a href="/#home" [attr.data-hover]="'home' | translate">{{ 'home' | translate }}</a></li>
-        <li [class.current]="scrolling.secondMenuSection() && onePage"><a href="/#technologies" [attr.data-hover]="'technologies' | translate">{{ 'technologies' | translate }}</a></li>
-        <li [class.current]="scrolling.thirdMenuSection() && onePage"><a href="/#projects" data-hover="Portfolio">Portfolio</a></li>
-        <li [class.current]="scrolling.fourthMenuSection() && onePage"><a href="/#about" [attr.data-hover]="'about' | translate">{{ 'about' | translate }}</a></li>
-        <li [class.current]="scrolling.fifthMenuSection() && onePage"><a href="/#contact" [attr.data-hover]="'contact' | translate">{{ 'contact' | translate }}</a></li>
+    <ul class="snip1135"> 
+        <li [class.current]="scrolling.firstMenuSection() && onePage">
+            <a [class.bg-white]="darkModeToggle" href="/#home" [attr.data-hover]="'home' | translate">{{ 'home' | translate }}</a>
+        </li>
+        <li [class.current]="scrolling.secondMenuSection() && onePage">
+            <a href="/#technologies" [attr.data-hover]="'technologies' | translate">{{ 'technologies' | translate }}</a>
+        </li>
+        <li [class.current]="scrolling.thirdMenuSection() && onePage">
+            <a href="/#projects" data-hover="Portfolio">Portfolio</a>
+        </li>
+        <li [class.current]="scrolling.fourthMenuSection() && onePage">
+            <a href="/#about" [attr.data-hover]="'about' | translate">{{ 'about' | translate }}</a>
+        </li>
+        <li [class.current]="scrolling.fifthMenuSection() && onePage">
+            <a href="/#contact" [attr.data-hover]="'contact' | translate">{{ 'contact' | translate }}</a>
+        </li>
         <li>
             <select (change)="selectLanguage($event)">
                 <option value="en-EN">EN</option>
@@ -18,12 +28,8 @@
             </select>
         </li>
         <li>
-           <!--  <img id="id-darkMode" (click)="toggleDarkMode()" src="assets/img/moon-fill.png">  -->
-            
-            <img *ngIf="darkModeToggle" (click)="toggleDarkMode()" src="assets/img/moon-fill.png"> 
-            <img *ngIf="!darkModeToggle" (click)="toggleDarkMode()" src="assets/img/sun-fill.png">  
-            
-            <!-- <img (click)="toggleDarkMode()" src1="{{ '/assets/img/' + darkModeImg }}">  -->
+            <img *ngIf="!darkModeToggle" (click)="toggleDarkMode()" src="assets/img/moon-fill.png"> 
+            <img *ngIf="darkModeToggle" (click)="toggleDarkMode()" src="assets/img/sun-fill.png">  
         </li>
     </ul>
 

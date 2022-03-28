@@ -20,6 +20,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DarkmodeService } from './darkmode.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json' );
@@ -56,7 +57,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule
   ],
   providers: [
-    ScrollingService
+    ScrollingService,
+    DarkmodeService
   ],
   bootstrap: [AppComponent]
 })

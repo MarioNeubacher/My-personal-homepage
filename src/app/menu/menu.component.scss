@@ -27,7 +27,7 @@ header {
 }
 
 img {
-  width: 25px; 
+  width: 20px; 
   height: auto;
 }
 
@@ -47,7 +47,8 @@ h1 {
 }
 
 span {
-  padding: 0px;
+  padding: 5px;
+  font-size: 35px;
 }
 
 p {
@@ -79,6 +80,10 @@ select {
 
 .color {
   background-color: red;
+}
+
+.bg-white {
+  background-color: white;
 }
 
 .white-color {
