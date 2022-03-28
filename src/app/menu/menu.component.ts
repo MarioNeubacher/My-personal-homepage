@@ -31,12 +31,13 @@ export class MenuComponent implements OnInit {
    */
   toggleDarkMode() {
     let element = document.getElementById('id-darkMode');
+    console.log(element);
 
     if (this.darkMode) {
-      element.src = "assets/img/sun-fill-png";
+      element.src = "assets/img/sun-fill.png";
       this.darkMode = false;
     } else {
-      element.src = "assets/img/moon-fill-png";
+      element.src = "assets/img/moon-fill.png";
       this.darkMode = true;
     }
   }
