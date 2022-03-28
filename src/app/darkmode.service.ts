@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DarkmodeService {
 
-  darkMode = true;
+  @Input() darkModeToggle = true; //@Input() enables to toggle from other components
 
   constructor() { }
 }
