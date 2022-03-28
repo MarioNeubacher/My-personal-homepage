@@ -9,10 +9,6 @@
   font-size: 17.5px;
 }
 
-.color {
-  background-color: red;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -28,6 +24,11 @@ header {
   padding: 0px 287.5px 0px 287.5px;
   background-color: black;
   text-decoration: none;
+}
+
+img {
+  width: 25px; 
+  height: auto;
 }
 
 a {
@@ -74,6 +75,18 @@ select {
     border: 0px;
     outline: 0px;
   }
+}
+
+.color {
+  background-color: red;
+}
+
+.white-color {
+  color: white;
+}
+
+.black-color {
+  color: black;
 }
 
 .div-links {

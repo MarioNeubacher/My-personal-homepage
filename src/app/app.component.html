@@ -1,5 +1,7 @@
 <app-menu
     [onePage]="router.url !== '/imprint' &&  router.url !== '/data-protection' &&  router.url !== '/disclaimer' &&  router.url !== '/icon-sources'">
 </app-menu> <!-- [onePage]="true" -->
-<router-outlet></router-outlet> <!-- switches between router links in footer -->
+
+<router-outlet></router-outlet> <!-- switches between router links in app-rounting.module.ts -->
+
 <app-footer></app-footer>
