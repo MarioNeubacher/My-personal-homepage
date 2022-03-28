@@ -18,12 +18,12 @@
             </select>
         </li>
         <li>
-            <!-- <img id="id-darkMode" (click)="toggleDarkMode()" src="assets/img/moon-fill.png"> 
+           <!--  <img id="id-darkMode" (click)="toggleDarkMode()" src="assets/img/moon-fill.png">  -->
             
-            <img *ngIf="darkMode" id="id-darkMode" (click)="toggleDarkMode()" src="assets/img/moon-fill.png"> 
-            <img *ngIf="!darkMode" id="id-darkMode" (click)="toggleDarkMode()" src="assets/img/sun-fill.png">  -->
+            <img *ngIf="darkMode" (click)="toggleDarkMode()" src="assets/img/moon-fill.png"> 
+            <img *ngIf="!darkMode" (click)="toggleDarkMode()" src="assets/img/sun-fill.png">  
             
-            <img (click)="toggleDarkMode()" [src]="src"> 
+            <!-- <img (click)="toggleDarkMode()" src1="{{ '/assets/img/' + darkModeImg }}">  -->
         </li>
     </ul>
 

@@ -12,8 +12,10 @@ import { ScrollingService } from '../scrolling.service';
 export class MenuComponent implements OnInit {
 
   hrefPortfolio = false;
-  languageSwitched = false;
-  src: string | undefined;
+  languageSwitched = false;f
+
+  /* const darkModeImg = 'moon-fill.png';
+  const lightModeImg = 'sun-fill.png'; */
 
   @Input() onePage = false; //@Input() enables to change variable outside of this component
   @Input() selectedSection = true;
@@ -31,16 +33,15 @@ export class MenuComponent implements OnInit {
    * This click function changes service variable darkMode to false
    */
   toggleDarkMode() {
-    const element = document.getElementById('id-darkMode');
-
     if (this.darkMode) {
-      this.src ="assets/img/moon-fill.png"
+      this.darkMode = false;
+      /* this.src1 = this.darkModeImg; */
       /* element.src = "assets/img/sun-fill.png"; */
-      /* this.darkMode = false; */
+     
     } else {
-      this.src ="assets/img/sun-fill.png"
+      this.darkMode = true;
+      /* this.src = this.darkModeImages.darkModeImg; */
       /* element.src = "assets/img/moon-fill.png"; */
-      /* this.darkMode = true; */
     }
   }
 }
