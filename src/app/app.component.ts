@@ -9,6 +9,9 @@ import { ScrollingService } from './scrolling.service';
 })
 
 export class AppComponent implements OnInit {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(public router: Router, public scrolling: ScrollingService) { } //public so get routes of other components 
   
