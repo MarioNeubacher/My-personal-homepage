@@ -18,7 +18,12 @@
             </select>
         </li>
         <li>
-            <img id="id-darkMode" (click)="toggleDarkMode()" src="assets/img/moon-fill.png"> <!-- *ngIf="darkMode"  --> <!-- *ngIf="!darkMode" --> 
+            <!-- <img id="id-darkMode" (click)="toggleDarkMode()" src="assets/img/moon-fill.png"> 
+            
+            <img *ngIf="darkMode" id="id-darkMode" (click)="toggleDarkMode()" src="assets/img/moon-fill.png"> 
+            <img *ngIf="!darkMode" id="id-darkMode" (click)="toggleDarkMode()" src="assets/img/sun-fill.png">  -->
+            
+            <img (click)="toggleDarkMode()" [src]="src"> 
         </li>
     </ul>
 

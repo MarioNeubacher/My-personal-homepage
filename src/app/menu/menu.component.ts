@@ -13,6 +13,7 @@ export class MenuComponent implements OnInit {
 
   hrefPortfolio = false;
   languageSwitched = false;
+  src: string | undefined;
 
   @Input() onePage = false; //@Input() enables to change variable outside of this component
   @Input() selectedSection = true;
@@ -30,15 +31,16 @@ export class MenuComponent implements OnInit {
    * This click function changes service variable darkMode to false
    */
   toggleDarkMode() {
-    let element = document.getElementById('id-darkMode');
-    console.log(element);
+    const element = document.getElementById('id-darkMode');
 
     if (this.darkMode) {
-      element.src = "assets/img/sun-fill.png";
-      this.darkMode = false;
+      this.src ="assets/img/moon-fill.png"
+      /* element.src = "assets/img/sun-fill.png"; */
+      /* this.darkMode = false; */
     } else {
-      element.src = "assets/img/moon-fill.png";
-      this.darkMode = true;
+      this.src ="assets/img/sun-fill.png"
+      /* element.src = "assets/img/moon-fill.png"; */
+      /* this.darkMode = true; */
     }
   }
 }
