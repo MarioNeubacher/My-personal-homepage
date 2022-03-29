@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkModeService } from 'angular-dark-mode';
 import * as Aos from 'aos';
 
 @Component({
@@ -8,7 +9,9 @@ import * as Aos from 'aos';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  darkModeToggle; 
+
+  constructor(public darkMode: DarkModeService) { }
 
   /**
    * This function loads the functions init if website loads 

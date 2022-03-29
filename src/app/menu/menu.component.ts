@@ -25,20 +25,4 @@ export class MenuComponent implements OnInit {
   public selectLanguage(event: any) {
     this.translateService.use(event.target.value);
   }
-
-  /**
-   * This click function changes service variable darkMode to false
-   */
-  toggleDarkMode() {
-    if (this.darkModeToggle) {
-      this.darkModeToggle = false;
-      /* this.src1 = this.darkModeImg; */
-      /* element.src = "assets/img/sun-fill.png"; */
-     
-    } else {
-      this.darkModeToggle = true;
-      /* this.src = this.darkModeImages.darkModeImg; */
-      /* element.src = "assets/img/moon-fill.png"; */
-    }
-  }
 }

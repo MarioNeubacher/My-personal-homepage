@@ -8,4 +8,16 @@ export class DarkmodeService {
   darkModeToggle = true; 
 
   constructor() { }
+
+  /**
+   * This click function changes service variable darkMode to false
+   */
+   toggleDarkMode() {
+    if (this.darkModeToggle) {
+      this.darkModeToggle = false;
+     
+    } else {
+      this.darkModeToggle = true;
+    }
+  }
 }
