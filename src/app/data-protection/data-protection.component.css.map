@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,EAAG;EACC,OAAO,EAAE,KAAK;EACd,SAAS,EAAE,KAAK;EAChB,UAAU,EAAE,MAAM;EAClB,aAAa,EAAE,MAAM;EACrB,WAAW,EAAE,CAAC;EACd,YAAY,EAAE,CAAC;EACf,WAAW,EAAE,IAAI",
+"sources": ["data-protection.component.scss"],
+"names": [],
+"file": "data-protection.component.css"
+}

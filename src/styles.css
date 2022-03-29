@@ -1,0 +1,36 @@
+/*
+Error: Invalid CSS after "@include mat": expected selector or at-rule, was ".core();"
+        on line 9 of C:\Users\mario\Documents\Developer_akademie\18. Portfolio\src\styles.scss
+
+4: // Plus imports for other components in your app.
+5: 
+6: // Include the common styles for Angular Material. We include this here so that you only
+7: // have to load a single css file for Angular Material in your app.
+8: // Be sure that you only ever include this mixin once!
+9: @include mat.core();
+10: 
+11: // Define the palettes for your theme using the Material Design palettes available in palette.scss
+12: // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+13: // hue. Available color palettes: https://material.io/design/color/
+14: $marioneubacher-primary: mat.define-palette(mat.$indigo-palette);
+
+Backtrace:
+C:\Users\mario\Documents\Developer_akademie\18. Portfolio\src\styles.scss:9
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:42:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"@include mat\": expected selector or at-rule, was \".core();\"\A         on line 9 of C:\Users\mario\Documents\Developer_akademie\18. Portfolio\src\styles.scss\A \A 4: // Plus imports for other components in your app.\A 5: \A 6: // Include the common styles for Angular Material. We include this here so that you only\A 7: // have to load a single css file for Angular Material in your app.\A 8: // Be sure that you only ever include this mixin once!\A 9: @include mat.core();\A 10: \A 11: // Define the palettes for your theme using the Material Design palettes available in palette.scss\A 12: // (imported above). For each palette, you can optionally specify a default, lighter, and darker\A 13: // hue. Available color palettes: https://material.io/design/color/\A 14: $marioneubacher-primary: mat.define-palette(mat.$indigo-palette);"; }

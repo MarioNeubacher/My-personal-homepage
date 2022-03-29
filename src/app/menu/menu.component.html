@@ -5,10 +5,10 @@
         <span [class.blackColor]="darkModeToggle">N</span>
     </a>
 
-    <ul class="snip1135">
+    <ul class="snip1135" [class.snip1135black]="darkModeToggle">
         <li [class.current]="scrolling.firstMenuSection() && onePage">
             <a href="/#home" [attr.data-hover]="'home' | translate">
-                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkModeToggle">{{ 'home' | translate }}</span> <!-- [class.snip1135black a:after]="darkModeToggle"  -->
+                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkModeToggle">{{ 'home' | translate }}</span>
             </a>
         </li>
         <li [class.current]="scrolling.secondMenuSection() && onePage">
