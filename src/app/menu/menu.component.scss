@@ -29,6 +29,7 @@ header {
 img {
   width: 20px; 
   height: auto;
+  cursor: pointer;
 }
 
 a {
@@ -69,6 +70,7 @@ select {
   font-size: 15px;
   outline: none;
   letter-spacing: 1px;
+  cursor: pointer;
 
   option {
     background: black;
@@ -90,8 +92,12 @@ select {
   color: white;
 }
 
-.black-color {
+.blackColor {
   color: black;
+}
+
+.greyColor {
+  color: grey;
 }
 
 .div-links {
@@ -146,12 +152,22 @@ select {
 }
 .snip1135 a:after {
   left: 0;
-  top: 0;
-  padding: 0.5em 0;
+  top: 0px;
+  padding: 6.5px 0px;
   position: absolute;
   content: attr(data-hover);
-  color: #ffffff;
   white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+.snip1135black a:after {
+  left: 0;
+  top: 0px;
+  padding: 6.5px 0px;
+  position: absolute;
+  content: attr(data-hover);
+  white-space: nowrap;
+  color: black;
   max-width: 0%;
   overflow: hidden;
 }
