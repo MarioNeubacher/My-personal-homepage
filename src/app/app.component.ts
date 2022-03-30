@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DarkModeService } from 'angular-dark-mode';
 import { ScrollingService } from './scrolling.service';
 
 @Component({

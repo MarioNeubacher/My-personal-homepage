@@ -15,14 +15,16 @@ export class MenuComponent implements OnInit {
   languageSwitched = false;
   @Input() onePage = false; //@Input() enables to toggle from other components
   @Input() selectedSection = true;
-  darkModeToggle; 
+  darkMode;
 
-  constructor(public router: Router, public scrolling: ScrollingService, private translateService: TranslateService, public darkMode: DarkModeService) { }
+  constructor(public router: Router, public scrolling: ScrollingService, private translateService: TranslateService, public darkModeServiceVar: DarkModeService) { }
 
   ngOnInit(): void {
+    this.darkMode = this.darkModeServiceVar.toggleDarkMode();
   }
 
   public selectLanguage(event: any) {
     this.translateService.use(event.target.value);
   }
+
 }
