@@ -1,45 +1,45 @@
-<header [class.bg-white]="darkMode" [class.blackColor]="darkMode" >
+<header [class.bg-white]="darkModeToggle" [class.blackColor]="darkModeToggle" >
     <a style="cursor: pointer; color: white; font-weight: bold; margin-top: 20px;" href="#home">
-        <span [class.blackColor]="darkMode">M</span>
+        <span [class.blackColor]="darkModeToggle">M</span>
         <span style="color: #FA2759; font-weight: 800">.</span>
-        <span [class.blackColor]="darkMode">N</span>
+        <span [class.blackColor]="darkModeToggle">N</span>
     </a>
 
-    <ul class="snip1135" [class.snip1135black]="darkMode">
+    <ul class="snip1135" [class.snip1135black]="darkModeToggle">
         <li [class.current]="scrolling.firstMenuSection() && onePage">
             <a href="/#home" [attr.data-hover]="'home' | translate">
-                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkMode">{{ 'home' | translate }}</span>
+                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkModeToggle">{{ 'home' | translate }}</span>
             </a>
         </li>
         <li [class.current]="scrolling.secondMenuSection() && onePage">
             <a href="/#technologies" [attr.data-hover]="'technologies' | translate">
-                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkMode">{{ 'technologies' | translate }}</span>
+                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkModeToggle">{{ 'technologies' | translate }}</span>
             </a>
         </li>
         <li [class.current]="scrolling.thirdMenuSection() && onePage">
             <a href="/#projects" data-hover="Portfolio">
-                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkMode">Portfolio</span>
+                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkModeToggle">Portfolio</span>
             </a>
         </li>
         <li [class.current]="scrolling.fourthMenuSection() && onePage">
             <a href="/#about" [attr.data-hover]="'about' | translate">
-                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkMode">{{ 'about' | translate }}</span>
+                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkModeToggle">{{ 'about' | translate }}</span>
             </a>
         </li>
         <li [class.current]="scrolling.fifthMenuSection() && onePage">
             <a href="/#contact" [attr.data-hover]="'contact' | translate">
-                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkMode">{{ 'contact' | translate }}</span>
+                <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkModeToggle">{{ 'contact' | translate }}</span>
             </a>
         </li>
         <li>
-            <select [class.blackColor]="darkMode" style="font-size: 15px; padding: 0px" (change)="selectLanguage($event)">
+            <select [class.blackColor]="darkModeToggle" style="font-size: 15px; padding: 0px" (change)="selectLanguage($event)">
                 <option value="en-EN">EN</option>
                 <option value="de-DE">DE</option>
             </select>
         </li>
         <li>
-            <img *ngIf="!darkMode" (click)="darkModeServiceVar.toggleDarkMode()" src="assets/img/moon-fill.png">
-            <img *ngIf="darkMode" (click)="darkModeServiceVar.toggleDarkMode()" src="assets/img/sun-fill.png">
+            <img *ngIf="!darkModeToggle" (click)="toggleDarkMode()" src="assets/img/moon-fill.png">
+            <img *ngIf="darkModeToggle" (click)="toggleDarkMode()" src="assets/img/sun-fill.png">
         </li>
     </ul>
 
