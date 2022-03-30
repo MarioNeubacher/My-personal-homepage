@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScrollingService } from '../scrolling.service';
 import * as Aos from 'aos';
+import { DarkmodeService } from '../darkmode.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -104,8 +105,9 @@ export class PortfolioComponent implements OnInit {
   ]
 
   visibleProjects = this.projects;
+  darkmodeToggle;
 
-  constructor(public scrolling: ScrollingService) { }
+  constructor(public scrolling: ScrollingService, public darkmodeService: DarkmodeService) { }
 
   /**
    * This function loads the functions init if website loads 

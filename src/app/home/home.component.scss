@@ -39,6 +39,10 @@ p {
     background-color: white;
 }
 
+.colorBlack {
+    color: rgb(0,0,0,0.8);
+}
+
 .scrollDownArrow {
     cursor: pointer;
 }
@@ -69,6 +73,22 @@ p {
 
     border-right: 2px solid white;
     border-bottom: 2px solid white;
+    margin: 0 0 3px 4px;
+
+    width: 16px;
+    height: 16px;
+}
+
+.m_scroll_arrows_black {
+    display: block;
+    width: 5px;
+    height: 5px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
     margin: 0 0 3px 4px;
 
     width: 16px;
@@ -411,7 +431,7 @@ p {
     content: "";
     position: absolute;
     top: -15px;
-    height: 50px;
+    height: 55px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -447,6 +467,103 @@ p {
 }
 
 .txt-dynamic3::after {
+    width: 0.125em;
+    background-color: transparent;
+    animation: blink2 var(--blinkInterval) steps(var(--typingCharacters2)) var(--typingDelay3) infinite,
+        typingFade var(--typingSpeed) steps(var(--typingCharacters3)) var(--typingDelay3) forwards;
+}
+
+.txt-dynamic_white {
+    font-family: monospace;
+    top: 20px;
+    font-size: 50px;
+    position: relative; //animations adapts to div
+    /* outline: 2px solid red; */
+    width: max-content; //necessary for steps length to adjust
+}
+
+.txt-dynamic2_white {
+    font-family: monospace;
+    top: 20px;
+    font-size: 50px;
+    position: relative; //animations adapts to div
+    /* outline: 2px solid red; */
+    width: max-content; //necessary for steps length to adjust
+    color: var(--red);
+}
+
+.txt-dynamic3_white {
+    font-family: monospace;
+    top: 20px;
+    font-size: 50px;
+    position: relative; //animations adapts to div
+    /* outline: 2px solid red; */
+    width: max-content; //necessary for steps length to adjust
+}
+
+.txt-dynamic_white::before,
+.txt-dynamic_white::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.txt-dynamic2_white::before,
+.txt-dynamic2_white::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.txt-dynamic3_white::before,
+.txt-dynamic3_white::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    height: 55px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.txt-dynamic_white::before {
+    background-color: white;
+    animation: typing var(--typingSpeed) steps(var(--typingCharacters1)) var(--typingDelay1) forwards;
+}
+
+.txt-dynamic2_white::before {
+    background-color: white;
+    animation: typing var(--typingSpeed) steps(var(--typingCharacters2)) var(--typingDelay2) forwards;
+}
+
+.txt-dynamic3_white::before {
+    background-color: white;
+    animation: typing var(--typingSpeed) steps(var(--typingCharacters3)) var(--typingDelay3) forwards;
+}
+
+.txt-dynamic_white::after {
+    width: 0.125em;
+    background-color: var(--green);
+    animation: blink var(--blinkInterval) steps(var(--typingCharacters1)) infinite,
+        typingFade var(--typingSpeed) steps(var(--typingCharacters1)) var(--typingDelay1) forwards;
+}
+
+.txt-dynamic2_white::after {
+    width: 0.125em;
+    background-color: transparent;
+    animation: blink2 var(--blinkInterval) steps(var(--typingCharacters2)) var(--typingDelay2) infinite,
+        typingFade var(--typingSpeed) steps(var(--typingCharacters2)) var(--typingDelay2) forwards;
+}
+
+.txt-dynamic3_white::after {
     width: 0.125em;
     background-color: transparent;
     animation: blink2 var(--blinkInterval) steps(var(--typingCharacters2)) var(--typingDelay3) infinite,

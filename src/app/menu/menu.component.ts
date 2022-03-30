@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { DarkModeService } from 'angular-dark-mode';
+import { DarkmodeService } from '../darkmode.service';
 import { ScrollingService } from '../scrolling.service';
 
 @Component({
@@ -15,9 +16,9 @@ export class MenuComponent implements OnInit {
   languageSwitched = false;
   @Input() onePage = false; //@Input() enables to toggle from other components
   @Input() selectedSection = true;
-  @Input() darkModeToggle;
+  darkmodeToggle;
 
-  constructor(public router: Router, public scrolling: ScrollingService, private translateService: TranslateService, public darkModeService: DarkModeService) { }
+  constructor(public router: Router, public scrolling: ScrollingService, private translateService: TranslateService, public darkmodeService: DarkmodeService) { }
 
   ngOnInit(): void {
     /* this.darkMode = this.darkModeService.toggleDarkMode(); */
@@ -32,11 +33,11 @@ export class MenuComponent implements OnInit {
      */
  toggleDarkMode() {
   /* console.log('check'); */
-  if (this.darkModeToggle) {
-    this.darkModeToggle = false;
+  if (this.darkmodeService.darkmodeToggle) {
+    this.darkmodeService.darkmodeToggle = false;
 
   } else {
-    this.darkModeToggle = true;
+    this.darkmodeService.darkmodeToggle = true;
   }
 }
 

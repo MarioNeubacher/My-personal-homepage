@@ -1,5 +1,5 @@
-<div id="technologies" class="div-section div-section1background">
-    <h1 data-aos="fade-down">{{ 'headline-technologies' | translate }}</h1>
+<div id="technologies" [class.div-section1background_lightgrey]="darkmodeService.darkmodeToggle" class="div-section div-section1background">
+    <h1 [class.colorBlack]="darkmodeService.darkmodeToggle" data-aos="fade-down">{{ 'headline-technologies' | translate }}</h1>
 
     <div data-aos="fade-down" style="background-color: red; height: 0.5px; width: 130px; margin-bottom: 75px;"></div>
    

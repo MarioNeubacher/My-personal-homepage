@@ -5,7 +5,7 @@ import { Injectable, Input } from '@angular/core';
 })
 export class DarkmodeService {
 
-  /* darkModeToggle = true; */
+  darkmodeToggle = false;
 
   constructor() { }
 

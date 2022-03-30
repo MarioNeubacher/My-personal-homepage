@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
 import { TranslateService } from '@ngx-translate/core';
+import { DarkmodeService } from '../darkmode.service';
 
 @Component({
   selector: 'app-technologies',
@@ -69,7 +70,9 @@ export class TechnologiesComponent implements OnInit {
     }
   ];
 
-  constructor(translate: TranslateService) {
+  darkmodeToggle;
+
+  constructor(translate: TranslateService, public darkmodeService: DarkmodeService) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
 

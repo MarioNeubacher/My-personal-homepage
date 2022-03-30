@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkmodeService } from '../darkmode.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public darkmodeService: DarkmodeService) { }
 
   ngOnInit(): void {
+    this.copyrightYearAutomatically();
+  }
+
+  copyrightYearAutomatically() {
+    const year = newDate().getFullYear();
+
+    document.getElementById('id-copyright').innerHTML = `Mario Neubacher ©` + year;
   }
 
 }

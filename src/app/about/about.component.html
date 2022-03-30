@@ -1,12 +1,12 @@
-<div id="about"
+<div id="about" [class.div-section1background_lightgrey]="darkmodeService.darkmodeToggle"
     style="background-color: var(--grey); min-width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
     <div style="display: flex; justify-content: center; align-items: center;">
-        <img data-aos="fade-left" src="assets/img/3.png" style="height: 300px; border-radius: 25px; width: auto; margin: 75px 40px 40px 40px">
+        <img data-aos="fade-left" src="assets/img/7.png" style="height: 300px; border-radius: 25px; width: auto; margin: 75px 40px 40px 40px">
         <div data-aos="fade-right" style="display: flex; flex-direction: column;">
-            <div style="text-align: center; font-weight: 900; margin-bottom: 10px; font-size: 30px;">
+            <div [class.colorBlack]="darkmodeService.darkmodeToggle" style="text-align: center; font-weight: 900; margin-bottom: 10px; font-size: 30px;">
                 {{ 'about-headline' | translate }}
             </div>
-            <div style="width: 400px; text-align: center;">
+            <div [class.colorBlack]="darkmodeService.darkmodeToggle" style="width: 400px; text-align: center;">
                 {{ 'about-text' | translate }} 
             </div>
         </div>
@@ -20,8 +20,8 @@
                 <div>
                     <img class="img" src="{{ '/assets/img/' + bullet.img }}">
                 </div>
-                <div style="margin: 20px; display: flex; align-items: center; justify-content: center; height: 15px">{{ bullet.title | translate }}</div>
-                <div style="margin: 10px; display: flex; align-items: center">{{ bullet.text | translate }}</div>
+                <div [class.colorBlack]="darkmodeService.darkmodeToggle" style="margin: 20px; display: flex; align-items: center; justify-content: center; height: 15px">{{ bullet.title | translate }}</div>
+                <div [class.colorBlack]="darkmodeService.darkmodeToggle" style="margin: 10px; display: flex; align-items: center">{{ bullet.text | translate }}</div>
             </div>
         </div>
     </div>

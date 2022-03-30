@@ -1,5 +1,5 @@
-<div id="contact" style="padding-top: 30px;">
-    <div class="div-contact">
+<div id="contact" style="padding-top: 30px;" [class.backgroundWhite]="darkmodeService.darkmodeToggle">
+    <div class="div-contact" [class.backgroundWhite]="darkmodeService.darkmodeToggle">
         <div class="frame">
             <div data-aos="zoom-out" class="frame">
                 <div class="lines"></div>
@@ -14,12 +14,12 @@
                             <a class="email" href="mailto:neubacher.mario00@gmail.com">neubacher.mario00@gmail.com</a>
                         </div>
                         <form action="http://mario-neubacher.developerakademie.com/send_mail.php" method="post">
-                            <div class="headline-contact">Name</div>
-                            <input required type="text" name="name" placeholder="{{ 'input-name' | translate }}">
-                            <div class="headline-contact">Email address</div>
-                            <input required type="email" name="email" placeholder="{{ 'input-email' | translate }}">
-                            <div class="headline-contact">Message</div>
-                            <textarea required type="text" name="message" placeholder="{{ 'textarea-message' | translate }}" cols="40"
+                            <div [class.colorGrey]="darkmodeService.darkmodeToggle" class="headline-contact">Name</div>
+                            <input [class.backgroundLightgrey]="darkmodeService.darkmodeToggle" required type="text" name="name" placeholder="{{ 'input-name' | translate }}">
+                            <div [class.colorGrey]="darkmodeService.darkmodeToggle" class="headline-contact">Email address</div>
+                            <input [class.backgroundLightgrey]="darkmodeService.darkmodeToggle" required type="email" name="email" placeholder="{{ 'input-email' | translate }}">
+                            <div [class.colorGrey]="darkmodeService.darkmodeToggle" class="headline-contact">Message</div>
+                            <textarea [class.backgroundLightgrey]="darkmodeService.darkmodeToggle" required type="text" name="message" placeholder="{{ 'textarea-message' | translate }}" cols="40"
                                 rows="7"></textarea>
                             <div style="display: flex; justify-content: flex-end">
                                 <button (click)="alert()" type="submit" class="btn-send">{{ 'btn-send' | translate }}</button>

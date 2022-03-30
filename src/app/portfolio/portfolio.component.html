@@ -1,20 +1,20 @@
-<div id="projects" class="div-section div-section2background" style="overflow-x: hidden">
+<div id="projects" [class.backgroundWhite]="darkmodeService.darkmodeToggle" class="div-section div-section2background" style="overflow-x: hidden">
     <!-- style tag bc otherwise there is a horizontal scroll bar bc of aos animations -->
-    <h1 data-aos="fade-left">Portfolio</h1>
+    <h1 [class.colorBlack]="darkmodeService.darkmodeToggle" data-aos="fade-left">Portfolio</h1>
 
     <div class="div-projectFilter" data-aos="fade-right">
-        <div id="id-all" [class.active]="currentFilter === ''" (click)="updateFilter()" class="div-projectsLanguage">
+        <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-all" [class.active]="currentFilter === ''" (click)="updateFilter()" class="div-projectsLanguage">
             {{ 'all' | translate }}
         </div>
-        <div id="id-angular" [class.active]="currentFilter === 'Angular'" (click)="updateFilter('Angular')"
+        <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-angular" [class.active]="currentFilter === 'Angular'" (click)="updateFilter('Angular')"
             class="div-projectsLanguage">Angular</div>
-        <div id="id-javascript" [class.active]="currentFilter === 'JavaScript'" (click)="updateFilter('JavaScript')"
+        <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-javascript" [class.active]="currentFilter === 'JavaScript'" (click)="updateFilter('JavaScript')"
             class="div-projectsLanguage">Java Script</div>
     </div>
 
     <div class="div-portfolio">
-        <div *ngFor="let project of visibleProjects" style="position: relative; cursor: pointer;">
-            <img src="{{ '/assets/img/' + project.img }}" data-aos="flip-left" class="img-projects">
+        <div *ngFor="let project of visibleProjects" style="position: relative; cursor: pointer; height: 100%;; width: 435.5px; margin: 20px">
+            <img src="{{ '/assets/img/' + project.img }}" data-aos="flip-left" [class.img-projects-blackshadow]="darkmodeService.darkmodeToggle" class="img-projects">
 
             <div class="project-overlay">
                 <h1 style="text-align: center;">{{ project.title | translate }}</h1>

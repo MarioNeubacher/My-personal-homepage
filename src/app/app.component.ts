@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { DarkModeService } from 'angular-dark-mode';
 import { ScrollingService } from './scrolling.service';
@@ -15,11 +16,11 @@ export class AppComponent implements OnInit {
   }
 
   constructor(public router: Router, public scrolling: ScrollingService) { } //public so get routes of other components 
-  
+
   ngOnInit(): void {
     language: 'en-EN';
   }
- 
+
   /**
    * This function is necessary for window.scroll query in scrolling.service 
    * @param event - This variable determines which scroll direction 
@@ -28,5 +29,4 @@ export class AppComponent implements OnInit {
   onScroll(event: any) {
     console.log(window.scrollY);
   }
-
 }

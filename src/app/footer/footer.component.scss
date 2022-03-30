@@ -15,7 +15,14 @@ img {
     cursor: pointer;
     filter: invert(100%);
     &:hover {
-        filter: invert(40%);
+        filter: invert(60%);
+    }
+}
+
+.filter {
+    filter: invert(70%) !important;
+    &:hover {
+        filter: invert(10%);
     }
 }
 
@@ -26,5 +33,16 @@ a {
 
     &:hover {
         filter: invert(40%);
+    }
+}
+
+.backgroundLightgrey {
+    background-color: lightgray !important;
+}
+
+.colorGrey {
+    color: rgb(0,0,0,0.8);
+    &:hover {
+        filter: invert(50%) !important;
     }
 }

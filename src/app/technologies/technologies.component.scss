@@ -21,8 +21,16 @@ h1 {
     align-items: center;
 }
 
+.colorBlack {
+    color: rgb(0,0,0,0.8);
+}
+
 .div-section1background{
     background-color: var(--grey); 
+}
+
+.div-section1background_lightgrey{
+    background-color: lightgray; 
 }
 
 .div-technologies {

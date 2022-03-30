@@ -21,7 +21,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0px 287.5px 0px 287.5px;
+  padding: 0px 335px 0px 287.5px;
   background-color: black;
   text-decoration: none;
   color: white;
@@ -79,6 +79,16 @@ select {
     color: var(--greyMenutabs);
     border: 0px;
     outline: 0px;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.img-sun {
+  filter: invert(30%);
+  &:hover {
+    filter: invert(0%);
   }
 }
 
@@ -95,11 +105,11 @@ select {
 }
 
 .blackColor {
-  color: black;
+  color: rgb(0,0,0,0.8);
 }
 
 .greyColor {
-  color: grey;
+  color: rgb(0,0,0,0.7);
 }
 
 .div-links {
@@ -128,7 +138,7 @@ select {
 .snip1135 li {
   display: inline-block;
   list-style: outside none none;
-  margin: 10px 0px 0px 25px;
+  margin: 0px 0px 0px 25px;
   padding: 0;
 }
 .snip1135 a {
@@ -164,7 +174,7 @@ select {
 }
 .snip1135black a:after {
   left: 0;
-  top: 0px;
+  top: 0.5px;
   padding: 6.5px 0px;
   position: absolute;
   content: attr(data-hover);
@@ -182,3 +192,7 @@ select {
 .snip1135 .current a:after {
   max-width: 100%;
 }
+
+/* DARK-LIGHT MODE */
+@import './../../styles';
+

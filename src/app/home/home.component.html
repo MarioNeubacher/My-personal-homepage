@@ -1,21 +1,28 @@
-<div [class.backgroundWhite]="darkModeToggle" style="padding: 0px 265px 0px 290px; overflow-x: hidden;">
+<div [class.backgroundWhite]="darkmodeService.darkmodeToggle" style="padding: 0px 265px 0px 290px; overflow-x: hidden;">
     <div id="home" class="div-home">
-        <div style="display: flex; flex-direction: column; padding: 0px; margin: 0px">
-            <p class="txt-dynamic">{{ 'home-firstLine' | translate }}</p>
-            <p class="txt-dynamic2">Mario Neubacher</p>
-            <p class="txt-dynamic3">Front-end {{ 'home-thirdLine' | translate }}<span style="color: #2dfcd8">e</span>r</p>
+        <div style="display: flex; flex-direction: column; padding: 60px 0px 0px 0px; margin: 0px">
+            <p [class.colorBlack]="darkmodeService.darkmodeToggle"
+                [class.txt-dynamic_white]="darkmodeService.darkmodeToggle" class="txt-dynamic">{{ 'home-firstLine' |
+                translate }}</p>
+            <p [class.colorBlack]="darkmodeService.darkmodeToggle"
+                [class.txt-dynamic2_white]="darkmodeService.darkmodeToggle" class="txt-dynamic2">Mario Neubacher</p>
+            <p [class.colorBlack]="darkmodeService.darkmodeToggle"
+                [class.txt-dynamic3_white]="darkmodeService.darkmodeToggle" class="txt-dynamic3">Front-end {{
+                'home-thirdLine' | translate }}<span style="color: #2dfcd8">e</span>r</p>
             <div class="animation-slideIn">
                 <a class="div-contact" href="#contact">{{ 'btn-contact' | translate }}</a>
             </div>
         </div>
-        <img src="assets/img/3.png" class="img-profile">
+         <img src="assets/img/7.png" class="img-profile"> 
     </div>
 </div>
 
-<div class="div-dropDownArrow">
-    <a href="#technologies" class="scrollDownArrow">
-        <span class="m_scroll_arrows unu"></span>
-        <span class="m_scroll_arrows doi"></span>
-        <span class="m_scroll_arrows trei"></span>
-    </a>
+<div [class.backgroundWhite]="darkmodeService.darkmodeToggle">
+    <div class="div-dropDownArrow">
+        <a href="#technologies" class="scrollDownArrow">
+            <span [class.m_scroll_arrows_black]="darkmodeService.darkmodeToggle" class="m_scroll_arrows unu"></span>
+            <span [class.m_scroll_arrows_black]="darkmodeService.darkmodeToggle" class="m_scroll_arrows doi"></span>
+            <span [class.m_scroll_arrows_black]="darkmodeService.darkmodeToggle" class="m_scroll_arrows trei"></span>
+        </a>
+    </div>
 </div>

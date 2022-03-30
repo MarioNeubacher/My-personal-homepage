@@ -35,6 +35,10 @@ textarea {
   }
 }
 
+.backgroundLightgrey {
+  background-color: lightgray;
+}
+
 .btn-send {
   width: 125px;
   outline: none;
@@ -60,12 +64,20 @@ textarea {
   font-size: 14px;
 }
 
+.backgroundWhite {
+  background-color: white !important;
+}
+
+.colorGrey {
+  color: grey;
+}
+
 .div-contact {
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 90px 0px 105px 0px;
+  padding: 90px 0px 105px 0px;
 }
 
 .div-frameContent {

@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { DarkmodeService } from '../darkmode.service';
 
 @Component({
   selector: 'app-about',
@@ -30,7 +31,7 @@ export class AboutComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(public darkmodeService: DarkmodeService) { }
 
   ngOnInit(): void {
 
