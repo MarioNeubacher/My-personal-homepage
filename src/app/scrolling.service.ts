@@ -6,11 +6,10 @@ import { Injectable } from '@angular/core';
 export class ScrollingService {
 
   firstMenuSectionY = 660;
-  secondMenuSectionY = 1792;
-  thirdMenuSectionY = 3575;
-  fourthMenuSectionY = 3530;
-  fifthMenuSectionY = 4462;
-  sixthMenuSectionY = 5000;
+  secondMenuSectionY = 1779;
+  thirdMenuSectionY = 3556;
+  fourthMenuSectionY = 4426;
+  fifthMenuSectionY = 5000;
 
   portfolioFilterLoaded = false;
 
@@ -49,7 +48,7 @@ export class ScrollingService {
    */
    fourthMenuSection() {
     /*     console.log('service works'); */
-    return window.scrollY > this.thirdMenuSectionY && window.scrollY < this.fifthMenuSectionY;
+    return window.scrollY > this.thirdMenuSectionY && window.scrollY < this.fourthMenuSectionY;
   }
 
   /**
@@ -58,6 +57,6 @@ export class ScrollingService {
    */
    fifthMenuSection() {
     /*     console.log('service works'); */
-    return window.scrollY > this.fifthMenuSectionY && window.scrollY < this.sixthMenuSectionY;
+    return window.scrollY > this.fourthMenuSectionY && window.scrollY < this.fifthMenuSectionY;
   }
 }

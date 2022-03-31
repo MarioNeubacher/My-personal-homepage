@@ -66,6 +66,7 @@ p {
     align-items: center;
     width: 360px;
     padding-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .active {
@@ -76,8 +77,7 @@ p {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 0px 0px 90px 0px;
-    width: 1050px;
+    padding: 0px 16.5% 90px 16.5%;
 }
 
 .img-projects {
@@ -174,5 +174,29 @@ p {
         &:hover {
             background-color: var(--red);
         }
+    }
+}
+
+@media (max-width: 500px) {
+    .img-projects {
+        width: 99.9%;
+    }   
+}
+
+@media (max-width: 500px) {
+    .img-projects {
+        width: 100%;
+        margin-left: 0px;
+    }  
+    
+    .div-portfolio {
+        padding: 0px 0% 90px 0%;
+    }
+}
+
+@media (max-width: 360px) {
+    .div-projectFilter {
+        display: flex;
+        flex-direction: column;
     }
 }

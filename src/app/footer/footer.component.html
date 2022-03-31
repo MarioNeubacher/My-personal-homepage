@@ -1,15 +1,15 @@
-<div [class.backgroundLightgrey]="darkmodeService.darkmodeToggle" style="display: flex; justify-content: center; align-items: center; background-color: var(--grey); padding: 50px 280px 50px 300px">
+<div [class.backgroundLightgrey]="darkmodeService.darkmodeToggle" style="display: flex; justify-content: center; align-items: center; background-color: var(--grey); padding: 50px 0px;">
     <div data-aos="zoom-out" style="display:flex; align-items: center; flex-direction: column;">
-        <div>
+        <div style="display: flex; justify-content: center">
             <a [class.filter]="darkmodeService.darkmodeToggle" href="https://github.com/MarioNeubacher"><img src="assets/img/github-fill.png"></a>
             <a [class.filter]="darkmodeService.darkmodeToggle" href="https://at.linkedin.com/in/mario-neubacher-98571820b"><img src="assets/img/linkedin-box-fill.png"></a>
         </div>
-        <div style="margin-top: 17.5px">
+        <div style="margin-top: 17.5px; display: flex; justify-content: center; flex-wrap: wrap; text-align: center;">
             <a [class.colorGrey]="darkmodeService.darkmodeToggle" routerLink="/imprint">{{ 'imprint' | translate }}</a>
             <a [class.colorGrey]="darkmodeService.darkmodeToggle" routerLink="/data-protection">{{ 'data-protection' | translate }}</a>
             <a [class.colorGrey]="darkmodeService.darkmodeToggle" routerLink="/disclaimer">{{ 'disclaimer' | translate }}</a>
             <a [class.colorGrey]="darkmodeService.darkmodeToggle" routerLink="/icon-sources">{{ 'icon-sources' | translate }}</a>
         </div>
-        <span id="id-copyright" [class.colorGrey]="darkmodeService.darkmodeToggle" style="margin-top: 20px;"></span>
+        <span id="id-copyright" [class.colorGrey]="darkmodeService.darkmodeToggle" style="margin-top: 20px; text-align: center;">Mario Neubacher © 2022</span>
     </div>
 </div>

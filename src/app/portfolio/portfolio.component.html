@@ -13,7 +13,7 @@
     </div>
 
     <div class="div-portfolio">
-        <div *ngFor="let project of visibleProjects" style="position: relative; cursor: pointer; height: 100%;; width: 435.5px; margin: 20px">
+        <div *ngFor="let project of visibleProjects" style="position: relative; cursor: pointer; height: 100%; margin: 20px">
             <img src="{{ '/assets/img/' + project.img }}" data-aos="flip-left" [class.img-projects-blackshadow]="darkmodeService.darkmodeToggle" class="img-projects">
 
             <div class="project-overlay">

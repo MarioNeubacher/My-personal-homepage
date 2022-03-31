@@ -31,14 +31,25 @@ export class MenuComponent implements OnInit {
   /**
      * This click function changes service variable darkMode to false
      */
- toggleDarkMode() {
-  /* console.log('check'); */
-  if (this.darkmodeService.darkmodeToggle) {
-    this.darkmodeService.darkmodeToggle = false;
+  toggleDarkMode() {
+    /* console.log('check'); */
+    if (this.darkmodeService.darkmodeToggle) {
+      this.darkmodeService.darkmodeToggle = false;
 
-  } else {
-    this.darkmodeService.darkmodeToggle = true;
+    } else {
+      this.darkmodeService.darkmodeToggle = true;
+    }
   }
-}
 
+  const modal = document.querySelector("#modal");
+  const openModal = document.querySelector(".open-button");
+  const closeModal = document.querySelector(".close-button");
+
+  openModal.addEventListener("click", () => {
+    modal.showModal();
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.close();
+  });
 }

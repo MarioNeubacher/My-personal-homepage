@@ -1,20 +1,20 @@
 <div id="about" [class.div-section1background_lightgrey]="darkmodeService.darkmodeToggle"
     style="background-color: var(--grey); min-width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-    <div style="display: flex; justify-content: center; align-items: center;">
-        <img data-aos="fade-left" src="assets/img/7.png" style="height: 300px; border-radius: 25px; width: auto; margin: 75px 40px 40px 40px">
-        <div data-aos="fade-right" style="display: flex; flex-direction: column;">
+    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding-top: 50px;">
+        <img data-aos="fade-left" src="assets/img/7.png" style="height: 300px; border-radius: 25px; width: auto">
+        <div data-aos="fade-right" style="display: flex; flex-direction: column; margin-top: 25px;">
             <div [class.colorBlack]="darkmodeService.darkmodeToggle" style="text-align: center; font-weight: 900; margin-bottom: 10px; font-size: 30px;">
                 {{ 'about-headline' | translate }}
             </div>
-            <div [class.colorBlack]="darkmodeService.darkmodeToggle" style="width: 400px; text-align: center;">
+            <div [class.colorBlack]="darkmodeService.darkmodeToggle" class="txt-about">
                 {{ 'about-text' | translate }} 
             </div>
         </div>
     </div>
 
-    <div data-aos="fade-zoom-in" style="background-color: var(--green); height: 0.5px; width: 952.5px; margin-bottom: 75px;"></div>
+    <div data-aos="fade-zoom-in" style="background-color: var(--green); height: 0.5px; width: 60%; margin: 50px 0px 75px 0px;"></div>
 
-    <div style="display: flex">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
         <div *ngFor="let bullet of bullets" style="width: 240px" data-aos="zoom-out">
             <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 100px">
                 <div>

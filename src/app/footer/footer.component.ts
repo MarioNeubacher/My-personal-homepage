@@ -11,13 +11,13 @@ export class FooterComponent implements OnInit {
   constructor(public darkmodeService: DarkmodeService) { }
 
   ngOnInit(): void {
-    this.copyrightYearAutomatically();
+   /*  this.copyrightYearAutomatically(); */
   }
 
-  copyrightYearAutomatically() {
-    const year = newDate().getFullYear();
+/*   copyrightYearAutomatically() {
+    const year = new Date().getFullYear();
 
-    document.getElementById('id-copyright').innerHTML = `Mario Neubacher ©` + year;
-  }
+    document.getElementById('id-copyright').innerHTML = `` + year;
+  } */
 
 }

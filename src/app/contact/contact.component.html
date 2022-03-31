@@ -1,15 +1,16 @@
 <div id="contact" style="padding-top: 30px;" [class.backgroundWhite]="darkmodeService.darkmodeToggle">
     <div class="div-contact" [class.backgroundWhite]="darkmodeService.darkmodeToggle">
-        <div class="frame">
+        <div class="frame" style="width: 62.5%">
             <div data-aos="zoom-out" class="frame">
                 <div class="lines"></div>
                 <div class="angles"></div>
                 <article>
-                    <div class="div-frameContent">
-                        <div style="color: var(--green); font-size: 40px; font-weight: 700; margin: 50px 0px 10px 0px;">
-                            {{ 'contact-headline' | translate }}
+                    <div class="div-frameContent" style="padding: 0px 10px">
+                        <div style="font-size: 2rem; font-weight: 700; margin: 50px 0px 10px 0px;">
+                            <span style="color: var(--green);">{{ 'contact-headline' | translate }}</span>
+                            
                         </div>
-                        <div style="color: #A8A8A8; margin-bottom: 10px; font-size: 12.5px;">
+                        <div class="div-contactContent">
                             {{ 'contact-h2' | translate }}
                             <a class="email" href="mailto:neubacher.mario00@gmail.com">neubacher.mario00@gmail.com</a>
                         </div>
@@ -21,7 +22,7 @@
                             <div [class.colorGrey]="darkmodeService.darkmodeToggle" class="headline-contact">Message</div>
                             <textarea [class.backgroundLightgrey]="darkmodeService.darkmodeToggle" required type="text" name="message" placeholder="{{ 'textarea-message' | translate }}" cols="40"
                                 rows="7"></textarea>
-                            <div style="display: flex; justify-content: flex-end">
+                            <div style="display: flex; justify-content: flex-end; width: 90.5%;">
                                 <button (click)="alert()" type="submit" class="btn-send">{{ 'btn-send' | translate }}</button>
                             </div>
                         </form>

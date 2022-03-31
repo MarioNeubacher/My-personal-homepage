@@ -25,3 +25,15 @@
     width: 40px;
     padding: 10px;
 }
+
+.txt-about {
+    padding: 0px 10px; 
+    text-align: center;
+    width: 400px;
+}
+
+@media (max-width: 400px) {
+    .txt-about {
+        width: 200px;
+    }
+}
