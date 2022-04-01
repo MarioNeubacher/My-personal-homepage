@@ -34,10 +34,6 @@ $marioneubacher-theme: mat.define-light-theme(
 // that you are using.
 @include mat.all-component-themes($marioneubacher-theme);
 
-* {
-  font-family: Inter;
-}
-
 body {
   margin: 0;
   padding: 0;
