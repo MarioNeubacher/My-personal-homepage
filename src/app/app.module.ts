@@ -21,9 +21,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DarkmodeService } from './darkmode.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json' );
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -40,11 +44,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     IconSourcesComponent,
     DisclaimerComponent,
-    OnePageComponent
+    OnePageComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatIconModule,
     HttpClientModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en-EN', //language by default when page loaded

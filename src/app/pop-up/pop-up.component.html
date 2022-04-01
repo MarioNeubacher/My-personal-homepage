@@ -1,0 +1,32 @@
+<div style="background-color: black; display: flex; flex-direction: column; align-items: center;" mat-dialog-content>
+    <a href="/#home" [attr.data-hover]="'home' | translate">
+        <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
+            'home' | translate }}</span>
+    </a>
+    <a href="/#technologies" [attr.data-hover]="'technologies' | translate">
+        <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
+            'technologies' | translate }}</span>
+    </a>
+    <a href="/#projects" data-hover="Portfolio">
+        <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">Portfolio</span>
+    </a>
+    <a href="/#about" [attr.data-hover]="'about' | translate">
+        <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
+            'about' | translate }}</span>
+    </a>
+    <a href="/#contact" [attr.data-hover]="'contact' | translate">
+        <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
+            'contact' | translate }}</span>
+    </a>
+    <select [class.blackColor]="darkmodeService.darkmodeToggle" style="font-size: 15px; padding: 0px"
+        (change)="selectLanguage($event)">
+        <option value="en-EN">EN</option>
+        <option value="de-DE">DE</option>
+    </select>
+    <div style="padding: 10px">
+        <img *ngIf="!darkmodeService.darkmodeToggle" (click)="toggleDarkMode()" src="assets/img/moon-fill.png"
+            class="img-moon">
+        <img *ngIf="darkmodeService.darkmodeToggle" (click)="toggleDarkMode()" src="assets/img/sun-fill.png"
+            class="img-sun">
+    </div>
+</div>

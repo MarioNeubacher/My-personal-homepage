@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { DarkModeService } from 'angular-dark-mode';
 import { DarkmodeService } from '../darkmode.service';
 import { ScrollingService } from '../scrolling.service';
+import {MatDialog } from '@angular/material/dialog';
+import { PopUpComponent } from '../pop-up/pop-up.component';
 
 @Component({
   selector: 'app-menu',
@@ -18,7 +19,7 @@ export class MenuComponent implements OnInit {
   @Input() selectedSection = true;
   darkmodeToggle;
 
-  constructor(public router: Router, public scrolling: ScrollingService, private translateService: TranslateService, public darkmodeService: DarkmodeService) { }
+  constructor(public router: Router, public scrolling: ScrollingService, private translateService: TranslateService, public darkmodeService: DarkmodeService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     /* this.darkMode = this.darkModeService.toggleDarkMode(); */
@@ -41,10 +42,10 @@ export class MenuComponent implements OnInit {
     }
   }
 
-  /**
-   * This click function opens the pop up
-   */
-  openPopUp() {
-    document.getElementById('id-popUp').classList.remove('d-none');
+  openDialog(): void {
+    const dialogRef = this.dialog.open(PopUpComponent);
+
+   
   }
+
 }

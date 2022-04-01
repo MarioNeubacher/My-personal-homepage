@@ -1,5 +1,5 @@
 <header [class.bg-white]="darkmodeService.darkmodeToggle" [class.blackColor]="darkmodeService.darkmodeToggle"
-    style="display: flex; align-items: center;">
+    style="display: flex; align-items: center; padding-top: 10px;">
     <a style="cursor: pointer; color: white; font-weight: bold; margin-top: 20px;" href="#home">
         <span [class.greyColor]="darkmodeService.darkmodeToggle">M</span>
         <span style="color: #FA2759; font-weight: 800">.</span>
@@ -54,12 +54,8 @@
         </div>
     </div>
 
-    <div (click)="openPopUp" class="div-burgerResponsive">
-        <img src="assets/img/burger.png">
-    </div>
-
-    <div id="id-popUp" class="popUp d-none">
-        test
-    </div>
+    <button (click)="openDialog()" class="div-burgerResponsive" mat-mini-fab color="black" aria-label="Example icon button with a menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
 
 </header>
