@@ -54,8 +54,8 @@
         </div>
     </div>
 
-    <button (click)="openDialog()" class="div-burgerResponsive" mat-mini-fab color="black" aria-label="Example icon button with a menu icon">
-        <mat-icon>menu</mat-icon>
+    <button style="box-shadow: none;" (click)="openDialog()" class="div-burgerResponsive" mat-mini-fab color="black" aria-label="Example icon button with a menu icon">
+        <mat-icon [class.blackColor]="darkmodeService.darkmodeToggle">menu</mat-icon>
     </button>
 
 </header>

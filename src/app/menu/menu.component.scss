@@ -186,7 +186,7 @@ select {
   content: attr(data-hover);
   white-space: nowrap;
   max-width: 0%;
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 .snip1135black a:after {
   left: 0;
@@ -197,7 +197,7 @@ select {
   white-space: nowrap;
   color: black;
   max-width: 0%;
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 .snip1135 a:hover:before,
 .snip1135 .current a:before {

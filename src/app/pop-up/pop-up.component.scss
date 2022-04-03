@@ -1,6 +1,5 @@
 * {
     color: white;
-    background-color: black;
 }
 
 a {
@@ -20,4 +19,12 @@ select {
     text-decoration: none;
     background-color: transparent;
     border: none;
+}
+
+.bg-lightgrey {
+    background-color: lightgray !important;
+}
+
+.blackColor {
+    color: black;
 }
