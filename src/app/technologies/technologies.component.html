@@ -8,7 +8,7 @@
             <div
                 style="display: flex; justify-content: center; align-items: center; flex-direction: column; position: relative;">
                 <div class="div-img">
-                    <img class="img" src="{{ '/assets/img/' + technology.img }}">
+                    <img class="img" src="{{ 'assets/img/' + technology.img }}"> <!-- no / before path bc it doesnt work when hosting -->
                 </div>
                 <span style="color: black; font-size: 16px;">{{ technology.name | translate }}</span>
             </div>

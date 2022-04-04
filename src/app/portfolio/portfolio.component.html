@@ -14,7 +14,7 @@
 
     <div class="div-portfolio">
         <div *ngFor="let project of visibleProjects" style="position: relative; cursor: pointer; height: 100%; margin: 20px">
-            <img src="{{ '/assets/img/' + project.img }}" data-aos="flip-left" [class.img-projects-blackshadow]="darkmodeService.darkmodeToggle" class="img-projects">
+            <img src="{{ 'assets/img/' + project.img }}" data-aos="flip-left" [class.img-projects-blackshadow]="darkmodeService.darkmodeToggle" class="img-projects">  <!-- no / before path bc it doesnt work when hosting -->
 
             <div class="project-overlay">
                 <h1 style="text-align: center;">{{ project.title | translate }}</h1>
