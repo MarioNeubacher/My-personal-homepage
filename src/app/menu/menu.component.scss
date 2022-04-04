@@ -13,7 +13,7 @@ header {
   display: flex;
   justify-content: space-between;
   z-index: 1;
-  position: fixed;
+  /* position: fixed; */
   right: 0;
   left: 0;
   align-items: center;
@@ -230,7 +230,7 @@ select {
 
 @media (max-width: 1165px) {
   .snip1135 {
-    overflow-x: auto;
+    /* overflow-x: auto; */
     width: 500px;
   }
 }

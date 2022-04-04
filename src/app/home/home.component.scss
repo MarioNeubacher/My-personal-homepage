@@ -298,7 +298,7 @@ p {
 
 .img-profile {
     height: 500px;
-    width: 400px;
+    width: 200px;
     border-radius: 200%;
 }
 
@@ -455,7 +455,7 @@ p {
 }
 
 .txt-dynamic::after {
-    width: 0.125em;
+    /* width: 0.125em; */
     background-color: var(--green);
     animation: blink var(--blinkInterval) steps(var(--typingCharacters1)) infinite,
         typingFade var(--typingSpeed) steps(var(--typingCharacters1)) var(--typingDelay1) forwards;
@@ -633,7 +633,7 @@ p {
 
 @media (max-width: 345px) {
     .img-profile {
-        width: 300px;
+        /* width: 300px; */
         height: 400px;
     }
 }
