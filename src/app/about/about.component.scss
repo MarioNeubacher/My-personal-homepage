@@ -13,6 +13,12 @@
     background-color: lightgrey !important;
 }
 
+.img-profileImg {
+    height: 300px; 
+    border-radius: 25px; 
+    width: auto
+}
+
 .colorBlack {
     color: rgb(0,0,0,0.7);
 }
@@ -30,6 +36,12 @@
     padding: 0px 10px; 
     text-align: center;
     width: 400px;
+}
+
+@media (max-width: 650px) {
+    .img-profileImg {
+        height: 275px;
+    }
 }
 
 @media (max-width: 400px) {

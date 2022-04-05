@@ -33,9 +33,18 @@ h1 {
     background-color: lightgray; 
 }
 
+.div-wrap {
+    display: flex; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+    margin-bottom: 50px; 
+    padding: 0px 18% 0px 18%;
+}
+
 .div-technologies {
     background-color: white; 
     height: 110px; 
+    margin: 6% 0%;
     width: 285px;
     border-radius: 10px;
     display: flex;
@@ -61,6 +70,23 @@ h1 {
 .img {
     height: 27.5px;
     width: auto;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out 1000ms forwards;
+}
+  
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 560px) {
+    .div-wrap {
+        padding: 0px;
+    }
 }
 
 @media (max-width: 300px) {

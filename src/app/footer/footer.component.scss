@@ -46,3 +46,15 @@ a {
         filter: invert(50%) !important;
     }
 }
+
+.div-footer {
+    display:flex; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+@media (max-width: 520px) {
+    .div-footer {
+        width: 50px;
+    }
+}

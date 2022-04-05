@@ -177,6 +177,12 @@ p {
     }
 }
 
+@media (max-width: 790px) {
+    .div-portfolio{
+        padding: 0px;
+    }
+}
+
 @media (max-width: 500px) {
     .img-projects {
         width: 99.9%;
