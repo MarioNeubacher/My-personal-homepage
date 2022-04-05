@@ -38,14 +38,59 @@
     width: 400px;
 }
 
+.div-bullets {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.dash {
+    background-color: var(--green); 
+    height: 0.5px; 
+    width: 60%; 
+    margin: 50px 0px 75px 0px;
+}
+
+.div-aboutMe {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    padding-top: 50px;
+}
+
+@media (max-width: 1020px) {
+    .div-bullets {
+        width: 300px;
+    }
+}
+
+@media (max-width: 770px) {
+    .div-aboutMe {
+        width: 200px;
+    }
+}
+
 @media (max-width: 650px) {
     .img-profileImg {
         height: 275px;
     }
 }
 
+@media (max-width: 510px) {
+    .txt-about {
+        width: 175px;
+    }
+}
+
 @media (max-width: 400px) {
     .txt-about {
+        width: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .div-bullets {
         width: 200px;
     }
 }

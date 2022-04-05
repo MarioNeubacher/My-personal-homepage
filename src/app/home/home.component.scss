@@ -381,7 +381,7 @@ p {
 .txt-dynamic {
     font-family: monospace;
     top: 20px;
-    font-size: 50px;
+    font-size: 48px;
     position: relative; //animations adapts to div
     /* outline: 2px solid red; */
     width: max-content; //necessary for steps length to adjust
@@ -455,7 +455,7 @@ p {
 }
 
 .txt-dynamic::after {
-    /* width: 0.125em; */
+    width: 0.125em;
     background-color: var(--green);
     animation: blink var(--blinkInterval) steps(var(--typingCharacters1)) infinite,
         typingFade var(--typingSpeed) steps(var(--typingCharacters1)) var(--typingDelay1) forwards;

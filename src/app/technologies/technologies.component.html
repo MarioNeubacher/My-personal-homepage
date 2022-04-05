@@ -1,8 +1,8 @@
 <div id="technologies" [class.div-section1background_lightgrey]="darkmodeService.darkmodeToggle" class="div-section div-section1background">
     
-    <h1 id="h1-technologies" [class.fade-in]="inViewPortService.elementInViewport2('h1-technologies')" [class.colorBlack]="darkmodeService.darkmodeToggle" >{{ 'headline-technologies' | translate }}</h1> 
+    <h1 #h1Tech [class.fade-in]="inViewPortService.elementInViewport2(h1Tech)" [class.colorBlack]="darkmodeService.darkmodeToggle" >{{ 'headline-technologies' | translate }}</h1> 
 
-    <div style="background-color: red; height: 0.5px; width: 130px; margin-bottom: 75px;"></div> 
+    <div #dash [class.fade-in]="inViewPortService.elementInViewport2(dash)" style="background-color: red; height: 0.5px; width: 130px; margin-bottom: 75px;"></div> 
    
     <div class="div-wrap">
         <div data-aos="flip-right" *ngFor="let technology of technologies" class="div-technologies" > 

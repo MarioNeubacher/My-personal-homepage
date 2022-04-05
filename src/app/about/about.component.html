@@ -1,6 +1,6 @@
 <div id="about" [class.div-section1background_lightgrey]="darkmodeService.darkmodeToggle"
     style="background-color: var(--grey); min-width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding-top: 50px;">
+    <div class="div-aboutMe">
         <img data-aos="zoom-out" src="assets/img/7.png" class="img-profileImg"> 
         <div data-aos="zoom-out" style="display: flex; flex-direction: column; margin-top: 25px;"> 
             <div [class.colorBlack]="darkmodeService.darkmodeToggle" style="text-align: center; font-weight: 900; margin-bottom: 10px; font-size: 30px;">
@@ -12,9 +12,9 @@
         </div>
     </div>
 
-    <div data-aos="fade-zoom-in" style="background-color: var(--green); height: 0.5px; width: 60%; margin: 50px 0px 75px 0px;"></div>
+    <div data-aos="fade-zoom-in" class="dash"></div>
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div class="div-bullets">
         <div *ngFor="let bullet of bullets" style="width: 240px" data-aos="zoom-out">
             <div style="display: flex; flex-direction: column; text-align: center; margin-bottom: 100px">
                 <div>
