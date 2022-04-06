@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as Aos from 'aos';
 import { TranslateService } from '@ngx-translate/core';
 import { DarkmodeService } from '../darkmode.service';
@@ -10,7 +10,9 @@ import { InViewPortService } from '../in-view-port.service';
   styleUrls: ['./technologies.component.scss']
 })
 
-export class TechnologiesComponent implements OnInit {
+export class TechnologiesComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('techTabSwitch') techTabSwitch : ElementRef; //export var to service for menu conditional CSS class
 
   technologies = [
     {
@@ -73,12 +75,20 @@ export class TechnologiesComponent implements OnInit {
 
   darkmodeToggle;
 
-  constructor(translate: TranslateService, public darkmodeService: DarkmodeService, public inViewPortService: InViewPortService) {
+  constructor(
+    translate: TranslateService, 
+    public darkmodeService: DarkmodeService, 
+    public inViewPortService: InViewPortService
+    ) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('en');
-
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('en');
+  }
+
+
+  ngAfterViewInit(): void {
+    this.inViewPortService.techTabSwitch = this.techTabSwitch;
   }
 
   ngOnInit(): void {

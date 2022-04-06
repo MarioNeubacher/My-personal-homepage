@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class InViewPortService {
 
+  techTabSwitch!: any;
+
   constructor() { }
   /**
    * This will check if the element is entirely visible in the current viewport:

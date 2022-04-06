@@ -14,7 +14,7 @@
                         'home' | translate }}</span>
                 </a>
             </li> 
-            <li [class.current]="inViewPortService.elementInViewport2(h1Tech) && onePage">
+            <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.techTabSwitch)">
                 <a href="/#technologies" [attr.data-hover]="'technologies' | translate">
                     <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'technologies' | translate }}</span>
