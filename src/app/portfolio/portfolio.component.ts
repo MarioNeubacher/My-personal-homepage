@@ -70,7 +70,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
       JsDoc: '',
       app_link: '',
       github_link: 'https://github.com/MarioNeubacher/Quiz-App',
-    },
+    }/* ,
     {
       img: 'instagram.PNG',
       category: 'javascript',
@@ -102,7 +102,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
       JsDoc: 'http://127.0.0.1:5500/out/index.html',
       app_link: 'https://marioneubacher.github.io/Note-app/',
       github_link: 'https://github.com/MarioNeubacher/Note-app',
-    }
+    } */
   ]
 
   visibleProjects = this.projects;

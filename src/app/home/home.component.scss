@@ -41,6 +41,10 @@ p {
     background-color: white;
 }
 
+.backgroundBlack {
+    background-color: Black;
+}
+
 .colorBlack {
     color: rgb(0,0,0,0.8);
 }
@@ -286,8 +290,8 @@ p {
     display:flex; 
     justify-content: center; 
     align-items: center; 
-    height: 136.5px;
     animation: fadeIn 10s;
+    padding-top: 100px;
 }
 
 @keyframes fadeIn {
@@ -297,15 +301,13 @@ p {
 }
 
 .img-profile {
-    height: 500px;
-    width: 400px;
-    border-radius: 200%;
+    height: 400px;
+    width: 300px;
 }
 
 .div-home {
     color: white; 
     display: flex; 
-    justify-content: space-between; 
     align-items: center; 
     padding: 85px 0px 0px 0px; 
     margin: 0px;
@@ -365,7 +367,6 @@ p {
     filter: invert(100);
     cursor: pointer;
     animation: dropDown 1.7s ease infinite;
-    margin-top: 50px;
 
     &:hover {
         filter: invert(50%);
@@ -639,5 +640,17 @@ p {
     .img-profile {
         width: 280px; 
         height: 400px;
+    }
+}
+
+@media (max-height: 700px) {
+    .div-dropDownArrow {
+        padding-top: 50px;
+    }
+}
+
+@media (max-height: 640px) {
+    .div-dropDownArrow {
+        padding-top: 0px;
     }
 }

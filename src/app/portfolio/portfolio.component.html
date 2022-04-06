@@ -2,7 +2,7 @@
     <!-- style tag bc otherwise there is a horizontal scroll bar bc of aos animations -->
     <h1 data-aos="zoom-out" [class.colorBlack]="darkmodeService.darkmodeToggle" >Portfolio</h1> 
 
-    <div data-aos="zoom-out" class="div-projectFilter">
+    <div data-aos="zoom-out" class="div-projectFilter" style="overflow-x: hidden">
         <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-all" [class.active]="currentFilter === ''" (click)="updateFilter()" class="div-projectsLanguage">
             {{ 'all' | translate }}
         </div>

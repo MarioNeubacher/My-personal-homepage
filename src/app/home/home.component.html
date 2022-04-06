@@ -1,5 +1,5 @@
-<div #homeTabSwitch>
-    <div [class.backgroundWhite]="darkmodeService.darkmodeToggle" style="padding: 0px 17.5% 0px 19%">
+<div #homeTabSwitch style="height: 100vh">
+    <div [class.backgroundBlack]="!darkmodeService.darkmodeToggle" style="padding: 50px 17.5% 0px 19%">
         <div id="home" class="div-home">
             <div class="txt-intro">
                 <p [class.colorBlack]="darkmodeService.darkmodeToggle"
@@ -14,11 +14,15 @@
                     <a class="div-contact" href="#contact">{{ 'btn-contact' | translate }}</a>
                 </div>
             </div>
-            <img src="assets/img/7.png" class="img-profile">
+
+            <div style="display: flex; justify-content: center; align-items: center; width: 500px;">
+                <img src="assets/img/7.png" class="img-profile">
+            </div>
+            
         </div>
     </div>
     
-    <div [class.backgroundWhite]="darkmodeService.darkmodeToggle">
+    <div [class.backgroundBlack]="!darkmodeService.darkmodeToggle" style="height: 100vh">
         <div class="div-dropDownArrow">
             <a href="#technologies" class="scrollDownArrow">
                 <span [class.m_scroll_arrows_black]="darkmodeService.darkmodeToggle" class="m_scroll_arrows unu"></span>

@@ -14,9 +14,8 @@
 }
 
 .img-profileImg {
-    height: 300px; 
-    border-radius: 25px; 
-    width: auto
+    height: 250px; 
+    margin: 25px 25px 25px 0px;
 }
 
 .colorBlack {
@@ -80,6 +79,18 @@
 @media (max-width: 510px) {
     .txt-about {
         width: 175px;
+    }
+}
+
+@media (max-width: 403px) {
+    .txt-about {
+        width: 75px;
+    }
+}
+
+@media (max-width: 403px) {
+    .dash {
+        width: 50%;
     }
 }
 

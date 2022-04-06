@@ -1,8 +1,8 @@
 <div #techTabSwitch id="technologies" [class.div-section1background_lightgrey]="darkmodeService.darkmodeToggle" class="div-section div-section1background">
     
-    <h1 #h1Tech [class.fade-in]="inViewPortService.elementInViewport2(h1Tech)" [class.colorBlack]="darkmodeService.darkmodeToggle" >{{ 'headline-technologies' | translate }}</h1> 
+    <h1 data-aos="zoom-out" [class.colorBlack]="darkmodeService.darkmodeToggle" >{{ 'headline-technologies' | translate }}</h1> 
 
-    <div #dash [class.fade-in]="inViewPortService.elementInViewport2(dash)" style="background-color: red; height: 0.5px; width: 130px; margin-bottom: 45px;"></div> 
+    <div data-aos="zoom-out" style="background-color: red; height: 0.5px; width: 130px; margin-bottom: 45px;"></div> 
    
     <div class="div-wrap">
         <div data-aos="flip-right" *ngFor="let technology of technologies" class="div-technologies" > 

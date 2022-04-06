@@ -10,36 +10,36 @@
         <ul class="snip1135" [class.snip1135black]="darkmodeService.darkmodeToggle">
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.homeTabSwitch)">
                 <a href="/#home" [attr.data-hover]="'home' | translate">
-                    <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
+                    <span class="txt-tab" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'home' | translate }}</span>
                 </a>
             </li>
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.techTabSwitch)">
                 <a href="/#technologies" [attr.data-hover]="'technologies' | translate">
-                    <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
+                    <span class="txt-tab" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'technologies' | translate }}</span>
                 </a>
             </li>
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.portfolioTabSwitch)">
                 <a href="/#projects" data-hover="Portfolio">
-                    <span style="font-size: 15px; padding: 0px"
+                    <span class="txt-tab"
                         [class.blackColor]="darkmodeService.darkmodeToggle">Portfolio</span>
                 </a>
             </li>
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.aboutTabSwitch)">
                 <a href="/#about" [attr.data-hover]="'about' | translate">
-                    <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
+                    <span class="txt-tab" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'about' | translate }}</span>
                 </a>
             </li>
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.contactTabSwitch)">
                 <a href="/#contact" [attr.data-hover]="'contact' | translate">
-                    <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
+                    <span class="txt-tab" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'contact' | translate }}</span>
                 </a>
             </li>
             <li class="hover">
-                <select [class.blackColor]="darkmodeService.darkmodeToggle" style="font-size: 15px; padding: 0px"
+                <select [class.blackColor]="darkmodeService.darkmodeToggle" class="txt-tab"
                     (change)="selectLanguage($event)">
                     <option value="en-EN">EN</option>
                     <option value="de-DE">DE</option>
