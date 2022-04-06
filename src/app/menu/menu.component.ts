@@ -12,17 +12,14 @@ import { InViewPortService } from '../in-view-port.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit/* , AfterViewInit */ {
+export class MenuComponent implements OnInit {
 
   hrefPortfolio = false;
   languageSwitched = false;
   @Input() onePage = false; //@Input() enables to toggle from other components
   @Input() selectedSection = true;
   darkmodeToggle;
-  /* techTabSwitch; */
 
- /*  @ViewChild('techTabSwitch') techTabSwitch : ElementRef; 
- */
   constructor(
     public router: Router,
     public scrolling: ScrollingService,
@@ -31,10 +28,6 @@ export class MenuComponent implements OnInit/* , AfterViewInit */ {
     public dialog: MatDialog,
     public inViewPortService: InViewPortService
   ) { }
-
-  /* ngAfterViewInit(): void {
-    this.inViewPortService.techTabSwitch = this.techTabSwitch;
-  } */
 
   ngOnInit(): void {
     /* this.darkMode = this.darkModeService.toggleDarkMode(); */
