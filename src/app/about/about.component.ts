@@ -1,12 +1,13 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { DarkmodeService } from '../darkmode.service';
+import { InViewPortService } from '../in-view-port.service';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, AfterViewInit {
 
   bullets = [
     {
@@ -31,7 +32,17 @@ export class AboutComponent implements OnInit {
     }
   ]
 
-  constructor(public darkmodeService: DarkmodeService) { }
+  @ViewChild('aboutTabSwitch') aboutTabSwitch: ElementRef; //export var to service for menu conditional CSS class
+
+
+  constructor(
+    public darkmodeService: DarkmodeService,
+    public inViewPortService: InViewPortService
+  ) { }
+
+  ngAfterViewInit(): void {
+    this.inViewPortService.aboutTabSwitch = this.aboutTabSwitch.nativeElement;
+  }
 
   ngOnInit(): void {
 

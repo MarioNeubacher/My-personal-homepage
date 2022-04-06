@@ -7,6 +7,9 @@ export class InViewPortService {
 
   homeTabSwitch!: any;
   techTabSwitch!: any;
+  portfolioTabSwitch!: any;
+  aboutTabSwitch!: any;
+  contactTabSwitch!: any;
 
   constructor() { }
   /**

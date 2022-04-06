@@ -86,7 +86,6 @@ export class TechnologiesComponent implements OnInit, AfterViewInit {
     translate.use('en');
   }
 
-
   ngAfterViewInit(): void {
     this.inViewPortService.techTabSwitch = this.techTabSwitch.nativeElement;
   }

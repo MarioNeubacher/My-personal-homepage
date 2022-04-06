@@ -1,15 +1,16 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScrollingService } from '../scrolling.service';
 import * as Aos from 'aos';
 import { DarkmodeService } from '../darkmode.service';
+import { InViewPortService } from '../in-view-port.service';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
 
   currentFilter = '';
 
@@ -107,7 +108,18 @@ export class PortfolioComponent implements OnInit {
   visibleProjects = this.projects;
   darkmodeToggle;
 
-  constructor(public scrolling: ScrollingService, public darkmodeService: DarkmodeService) { }
+  @ViewChild('portfolioTabSwitch') portfolioTabSwitch : ElementRef; //export var to service for menu conditional CSS class
+
+
+  constructor(
+    public scrolling: ScrollingService,
+    public darkmodeService: DarkmodeService,
+    public inViewPortService: InViewPortService
+  ) { }
+
+  ngAfterViewInit(): void {
+    this.inViewPortService.portfolioTabSwitch = this.portfolioTabSwitch.nativeElement;
+  }
 
   /**
    * This function loads the functions init if website loads 

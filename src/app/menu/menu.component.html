@@ -20,19 +20,19 @@
                         'technologies' | translate }}</span>
                 </a>
             </li>
-            <li [class.current]="scrolling.thirdMenuSection() && onePage">
+            <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.portfolioTabSwitch)">
                 <a href="/#projects" data-hover="Portfolio">
                     <span style="font-size: 15px; padding: 0px"
                         [class.blackColor]="darkmodeService.darkmodeToggle">Portfolio</span>
                 </a>
             </li>
-            <li [class.current]="scrolling.fourthMenuSection() && onePage">
+            <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.aboutTabSwitch)">
                 <a href="/#about" [attr.data-hover]="'about' | translate">
                     <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'about' | translate }}</span>
                 </a>
             </li>
-            <li [class.current]="scrolling.fifthMenuSection() && onePage">
+            <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.contactTabSwitch)">
                 <a href="/#contact" [attr.data-hover]="'contact' | translate">
                     <span style="font-size: 15px; padding: 0px" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'contact' | translate }}</span>
