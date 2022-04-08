@@ -1,7 +1,7 @@
 <div #homeTabSwitch style="height: 100vh; background-color: black;" [class.backgroundWhite]="darkmodeService.darkmodeToggle">
     
-    <div [class.backgroundWhite]="darkmodeService.darkmodeToggle" style="padding: 50px 17.5% 0px 19%">
-        <div id="home" class="div-home">
+    <div [class.backgroundWhite]="darkmodeService.darkmodeToggle" style="padding: 50px 19% 0px 19%">
+        <div id="home" class="div-home" style="display: flex; justify-content: space-between">
             <div class="txt-intro">
                 <p [class.colorBlack]="darkmodeService.darkmodeToggle"
                     [class.txt-dynamic_white]="darkmodeService.darkmodeToggle" class="txt-dynamic">{{ 'home-firstLine' |
@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <div style="display: flex; justify-content: center; align-items: center; width: 500px;">
+            <div style="display: flex; justify-content: center; align-items: center">
                 <img src="assets/img/7.png" class="img-profile">
             </div>
             

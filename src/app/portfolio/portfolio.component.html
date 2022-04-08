@@ -1,40 +1,40 @@
-<div #portfolioTabSwitch id="projects" [class.backgroundWhite]="darkmodeService.darkmodeToggle" class="div-section div-section2background">
+<div #portfolioTabSwitch id="projects" [class.backgroundWhite]="darkmodeService.darkmodeToggle"
+    class="div-section div-section2background">
     <!-- style tag bc otherwise there is a horizontal scroll bar bc of aos animations -->
-    <h1 data-aos="zoom-out" [class.colorBlack]="darkmodeService.darkmodeToggle" >Portfolio</h1> 
+    <h1 data-aos="zoom-out" [class.colorBlack]="darkmodeService.darkmodeToggle">Portfolio</h1>
 
     <div data-aos="zoom-out" class="div-projectFilter" style="overflow-x: hidden">
-        <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-all" [class.active]="currentFilter === ''" (click)="updateFilter()" class="div-projectsLanguage">
-            {{ 'all' | translate }}
+        <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-all" [class.active]="currentFilter === ''"
+            (click)="updateFilter()" class="div-projectsLanguage btn btn-4"><span style="color: white">{{ 'all' |
+                translate }}</span>
         </div>
-        <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-angular" [class.active]="currentFilter === 'Angular'" (click)="updateFilter('Angular')"
-            class="div-projectsLanguage">Angular</div>
-        <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-javascript" [class.active]="currentFilter === 'JavaScript'" (click)="updateFilter('JavaScript')"
-            class="div-projectsLanguage">Java Script</div>
+        <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-angular"
+            [class.active]="currentFilter === 'Angular'" (click)="updateFilter('Angular')"
+            class="div-projectsLanguage btn btn-4"><span style="color: white">Angular</span></div>
+        <div [class.colorBlack]="darkmodeService.darkmodeToggle" id="id-javascript"
+            [class.active]="currentFilter === 'JavaScript'" (click)="updateFilter('JavaScript')"
+            class="div-projectsLanguage btn btn-4"><span style="color: white">Java Script</span></div>
     </div>
 
     <div class="div-portfolio">
-        <div *ngFor="let project of visibleProjects" style="position: relative; cursor: pointer; height: 100%; margin: 20px">
-            <img src="{{ 'assets/img/' + project.img }}" data-aos="flip-left" [class.img-projects-blackshadow]="darkmodeService.darkmodeToggle" class="img-projects">  <!-- no / before path bc it doesnt work when hosting -->
+        <div *ngFor="let project of visibleProjects"
+            style="position: relative; cursor: pointer; height: 100%; margin: 20px">
+            <img src="{{ 'assets/img/' + project.img }}" data-aos="flip-left"
+                [class.img-projects-blackshadow]="darkmodeService.darkmodeToggle" class="img-projects">
+            <!-- no / before path bc it doesnt work when hosting -->
 
             <div class="project-overlay">
                 <h1 style="text-align: center;">{{ project.title | translate }}</h1>
 
                 <div class="project-btn">
-                    <button>
-                        <img style="height: 21px; margin: 0px -3px 0px 2.5px;" src="/assets/img/external-link.png">
-                        <a href="{{ project.app_link }}">{{ 'open' | translate }}</a>
-                    </button>
-                    <div style="display: flex;">
-                        <button style="border-radius: 5px 0px 0px 5px ;">
-                            <img style="height: 22.5px; margin: 0px -3px 0px 2.5px;" src="/assets/img/github.png">
-                            <a href="{{ project.github_link }}">GitHub</a>
+                    <div id="container">
+                        <button class="learn-more">
+                          <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                          </span>
+                          <a href="{{ project.app_link }}"><span class="button-text">{{ 'open' | translate }}</span></a>
                         </button>
-                        <button style="border-radius: 0px 5px 5px 0px ;">
-                            <img style="height: 21px; margin: 0px -3px 0px 2.5px;" src="/assets/img/list.png">
-                            <a href="{{ project.JsDoc }}">JSDOC</a>
-                        </button>
-
-                    </div>
+                      </div>
                 </div>
             </div>
         </div>
