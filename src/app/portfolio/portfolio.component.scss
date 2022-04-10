@@ -204,10 +204,10 @@ button:hover .button-text {
         background-size: contain;
         box-shadow: 5px 5px 21px 0px #ffffff91;
         cursor: pointer;
+    }
 
-        &:hover {
-            filter: brightness(75%) !important;
-        }
+    .scale {
+        transform: scale(1.05);
     }
 
     .img-projects-blackshadow {
@@ -382,8 +382,4 @@ button:hover .button-text {
             flex-direction: column;
         }
     }
-}
-
-.zoomPic {
-    transform: scale(1.1) !important;
 }
