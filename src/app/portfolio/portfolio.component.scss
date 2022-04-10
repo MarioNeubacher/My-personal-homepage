@@ -266,12 +266,6 @@ button:hover .button-text {
         &:hover {
             opacity: 0.95;
         }
-        
-        .img-projects {    
-            &:hover {
-                transform: scale(1.1) !important;
-            }
-        }
     }
 
     .project-btn {
@@ -388,4 +382,8 @@ button:hover .button-text {
             flex-direction: column;
         }
     }
+}
+
+.zoomPic {
+    transform: scale(1.1) !important;
 }

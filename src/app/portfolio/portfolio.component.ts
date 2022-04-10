@@ -14,6 +14,8 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
 
   currentFilter = '';
 
+  zoomImage = false;
+
   projects = [
     {
       img: 'ring-of-fire.PNG',
@@ -143,6 +145,10 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
       this.currentFilter = 'JavaScript';
       this.visibleProjects = this.projects.filter(project => project.category == 'javascript');
     }
+  }
+
+  zoomImg(boolean) {
+    this.zoomImage = boolean;
   }
 
 }
