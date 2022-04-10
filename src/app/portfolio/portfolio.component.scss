@@ -207,7 +207,7 @@ button:hover .button-text {
     }
 
     .scale {
-        transform: scale(1.05);
+        transform: scale(1.05) !important;
     }
 
     .img-projects-blackshadow {
@@ -222,6 +222,14 @@ button:hover .button-text {
         cursor: pointer;
     }
 
+    .overlay {
+        filter: brightness(0.2);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+    }
+
     .project-overlay {
         display: flex;
         flex-direction: column;
@@ -229,10 +237,6 @@ button:hover .button-text {
         align-items: center;
         opacity: 0;
         transition: all 225ms ease-in-out;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
         width: 100%;
         height: 100%;
         border-radius: 10px;

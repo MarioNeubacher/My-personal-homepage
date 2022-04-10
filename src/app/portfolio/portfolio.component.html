@@ -17,14 +17,14 @@
     </div>
 
     <div class="div-portfolio">
-        <div *ngFor="let project of visibleProjects" style="position: relative; cursor: pointer; height: 100%; margin: 20px">
-            <img (mouseover)="overlay = true" (mouseout)="overlay = false" src="{{ 'assets/img/' + project.img }}"
+        <div *ngFor="let project of visibleProjects; let i = index" style="position: relative; cursor: pointer; height: 100%; margin: 20px">
+            <img (mouseover)="overlay = i" (mouseout)="overlay = -1" src="{{ 'assets/img/' + project.img }}"
                 data-aos="flip-left" [class.img-projects-blackshadow]="darkmodeService.darkmodeToggle"
-                class="img-projects" [class.scale]="overlay === true"> <!-- no / before path bc it doesnt work when hosting -->
+                class="img-projects" [class.scale]="overlay === i"> <!-- no / before path bc it doesnt work when hosting -->
 
-            <!-- <div *ngIf="overlay === true" style="filter: brightness(0.2)">
+            <div class="overlay" *ngIf="overlay === i"> 
                 <h1 style="text-align: center;">{{ project.title | translate }}</h1>
-
+ 
                 <div class="project-btn">
                     <div id="container">
                         <button class="learn-more">
@@ -36,7 +36,7 @@
                         </button>
                     </div>
                 </div>
-            </div> -->
+            </div> 
 
         </div>
     </div>

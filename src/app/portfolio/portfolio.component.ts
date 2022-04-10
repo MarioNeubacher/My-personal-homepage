@@ -14,7 +14,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
 
   currentFilter = '';
 
-  overlay = false;
+  overlay = -1;
 
   projects = [
     {
