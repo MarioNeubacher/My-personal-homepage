@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DarkmodeService } from '../darkmode.service';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +12,7 @@ export class FooterComponent implements OnInit {
   constructor(public darkmodeService: DarkmodeService) { }
 
   ngOnInit(): void {
+    Aos.init();
    /*  this.copyrightYearAutomatically(); */
   }
 

@@ -9,31 +9,30 @@
     <div class="div-rightNavbar">
         <ul class="snip1135" [class.snip1135black]="darkmodeService.darkmodeToggle">
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.homeTabSwitch)">
-                <a href="/#home" [attr.data-hover]="'home' | translate">
+                <a href="#home" [attr.data-hover]="'home' | translate">
                     <span class="txt-tab" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'home' | translate }}</span>
                 </a>
             </li>
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.techTabSwitch)">
-                <a href="/#technologies" [attr.data-hover]="'technologies' | translate">
+                <a href="#technologies" [attr.data-hover]="'technologies' | translate">
                     <span class="txt-tab" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'technologies' | translate }}</span>
                 </a>
             </li>
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.portfolioTabSwitch)">
-                <a href="/#projects" data-hover="Portfolio">
-                    <span class="txt-tab"
-                        [class.blackColor]="darkmodeService.darkmodeToggle">Portfolio</span>
+                <a href="#projects" data-hover="Portfolio">
+                    <span class="txt-tab" [class.blackColor]="darkmodeService.darkmodeToggle">Portfolio</span>
                 </a>
             </li>
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.aboutTabSwitch)">
-                <a href="/#about" [attr.data-hover]="'about' | translate">
+                <a href="#about" [attr.data-hover]="'about' | translate">
                     <span class="txt-tab" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'about' | translate }}</span>
                 </a>
             </li>
             <li [class.current]="inViewPortService.elementInViewport2(inViewPortService.contactTabSwitch)">
-                <a href="/#contact" [attr.data-hover]="'contact' | translate">
+                <a href="#contact" [attr.data-hover]="'contact' | translate">
                     <span class="txt-tab" [class.blackColor]="darkmodeService.darkmodeToggle">{{
                         'contact' | translate }}</span>
                 </a>

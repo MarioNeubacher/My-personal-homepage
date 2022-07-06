@@ -27,6 +27,6 @@ export class AppComponent implements OnInit {
    */
   @HostListener('window:scroll', ['$event'])  // needs to be in component.ts not service
   onScroll(event: any) {
-    console.log(window.scrollY);
+    /* console.log(window.scrollY); */
   }
 }
