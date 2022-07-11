@@ -38,7 +38,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
       category: 'javascript',
       title: 'el-pollo-loco',
       JsDoc: '',
-      app_link: '',
+      app_link: 'http://127.0.0.1:5500/index.html',
       github_link: 'https://github.com/MarioNeubacher/El-Pollo-Loco',
     },
     {
