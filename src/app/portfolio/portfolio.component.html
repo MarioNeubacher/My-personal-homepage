@@ -18,7 +18,7 @@
 
     <div class="div-portfolio">
         <div *ngFor="let project of visibleProjects; let i = index"
-            style="position: relative; cursor: pointer; height: 100%; margin: 20px">
+            style="position: relative; height: 100%; margin: 20px">
             <div style="overflow: hidden; border-radius: 10px;">
                 <img src="{{ 'assets/img/' + project.img }}" (mouseover)="overlay = i" (mouseout)="overlay = -1"
                     data-aos="flip-left" [class.img-projects-blackshadow]="darkmodeService.darkmodeToggle"
@@ -29,11 +29,11 @@
             <div class="overlay" *ngIf="overlay === i">
                 <h1 style="text-align: center; font-size: 20px; padding-bottom: 0px;">{{ project.title | translate }}</h1>
 
-                <div class="project-btn">
-                    <div id="container">
-                        <button class="learn-more">
-                            <span class="circle" aria-hidden="true">
-                                <span class="icon arrow"><a href="{{ project.app_link }}"><span >{{ 'open' | translate}}</span></a> <!-- class="button-text" --></span>
+                <div class="project-btn"> <!-- (mouseover)="overlay = -2" (mouseout)="overlay = i"  -->
+                    <div class="btn-open" id="container">
+                        <button style="display: flex; justify-content: center; align-items: center">
+                            <span aria-hidden="true">
+                                <a href="{{ project.app_link }}"><span>{{ 'open' | translate}}</span></a> <!-- [class.hover]="overlay === -2" -->
                             </span>
                         </button>
                     </div>
