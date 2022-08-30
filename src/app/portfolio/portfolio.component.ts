@@ -137,10 +137,10 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
    */
   updateFilter(newFilter?: string) {
     if (newFilter == undefined) {
-      this.currentFilter = '';
+      this.currentFilter = ''; 
       this.visibleProjects = this.projects;
     } else if (newFilter == 'Angular') {
-      this.currentFilter = 'Angular';
+      this.currentFilter = 'Angular'; //changes selected button
       this.visibleProjects = this.projects.filter(project => project.category == 'angular');
     } else if (newFilter == 'JavaScript') {
       this.currentFilter = 'JavaScript';
