@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScrollingService } from '../scrolling.service';
 import * as Aos from 'aos';
@@ -8,7 +8,8 @@ import { InViewPortService } from '../in-view-port.service';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss']/* ,
+  changeDetection: ChangeDetectionStrategy.OnPush */
 })
 export class PortfolioComponent implements OnInit, AfterViewInit {
 

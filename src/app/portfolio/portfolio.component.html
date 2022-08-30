@@ -27,19 +27,15 @@
             </div>
 
             <div class="overlay" *ngIf="overlay === i">
-                <h1 style="text-align: center; font-size: 20px; padding-bottom: 0px;">{{ project.title | translate }}</h1>
+                <h1 style="text-align: center; font-size: 20px; padding-bottom: 0px;">{{ project.title | translate }}
+                </h1>
 
-                <div class="project-btn"> <!-- (mouseover)="overlay = -2" (mouseout)="overlay = i"  -->
-                    <div class="btn-open" id="container">
-                        <button style="display: flex; justify-content: center; align-items: center">
-                            <span aria-hidden="true">
-                                <a href="{{ project.app_link }}"><span>{{ 'open' | translate}}</span></a> <!-- [class.hover]="overlay === -2" -->
-                            </span>
-                        </button>
-                    </div>
+                <div class="project-btn">
+                    <!-- (mouseover)="overlay = -2" (mouseout)="overlay = i"  -->
+                    <a class="btn-open" href="{{ project.app_link }}">{{ 'open' | translate}}</a>
+                    <!-- [class.hover]="overlay === -2" -->
                 </div>
             </div>
-
         </div>
     </div>
 </div>
